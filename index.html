@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		permille:['{}^\\text{o}\\mkern-5mu/\\mkern-3mu_\\text{oo}',0],
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+ <a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+ <!--menuend-->
+ <!--navstart-->
+
+<!--navend-->
+ </div>
+<h1>Wetenschap Online</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+Op deze site tref je een aantal boeken aan die ik in de loop van de tijd heb geschreven. Wellicht dat er ook voor jou nuttige informatie te vinden is.<p></p>
+
+ 
+</section>
+<section>
+
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

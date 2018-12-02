@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		permille:['{}^\\text{o}\\mkern-5mu/\\mkern-3mu_\\text{oo}',0],
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+ <a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+ <!--menuend-->
+ <!--navstart-->
+ <a href="chem_1_2_3.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1_2_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a>  
+ <!--navend-->
+ </div>
+<h1>Verbindingen</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Verbindingen</a>
+<ul>
+<li><a href='#h3_1'>Atoombinding</a></li>
+<li><a href='#h3_2'>Ionbinding</a></li>
+<li><a href='#h3_3'>Metaalbinding</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+<h2 id='h2_1'>Verbindingen</h2>
+Zuivere stoffen bestaan uit atomen die aan elkaar zijn gebonden. Er zijn verschillende mogelijkheden waarop atomen aan elkaar binden. Een stel atomen die aan elkaar zijn gebonden heet een verbinding.<p></p>
+<h3 id='h3_1'>Atoombinding</h3>
+Een molecuul is een verbinding tussen atomen waarbij de atomen elektronen met elkaar <i>delen</i>. Deze binding van atomen heet een <i>atoombinding</i>. De moleculen zelf kleven ook weer aan elkaar, de <i>molecuulbinding</i>, door de zogenaamde <i>Vanderwaalsbinding</i>. Daarnaast komen in bepaalde moleculen nog andere molecuulbindingen voor: <i>waterstofbruggen</i> en <i>dipool-dipoolbindingen</i>. Deze bindingen zullen we later in meer detail bekijken. De moleculaire verbindingen komt alleen voor tussen de <i>niet-metalen</i>. We noemen deze stoffen <i>moleculaire stoffen</i>.<p></p>
+
+<h3 id='h3_2'>Ionbinding</h3>
+Een elektrisch geladen atoom heet een <i>ion</i>. Een negatief ion heet <i>anion</i> en een positief ion <i>kation</i>. Een anion en kation kunnen elkaar aantrekken en daardoor aan elkaar kleven. Deze binding heet een <i>ionbinding</i>. De ionbinding ontstaat tussen atomen die gemakkelijk elektronen afstaan (metalen) en atomen die elektronen sterk aantrekken (niet-metalen). Elektronen worden dus in een ionbinding overgedragen. Anionen en kationen komen niet zelfstandig voor als stof, maar alleen in paren zodat de totale elektrische lading van een stof altijd neutraal is. In een vaste stof zitten de ionen aan elkaar geplakt (de ionen vormen een <i>ionenrooster</i>.), in opgeloste vorm zoals in water, zijn de ionen van elkaar losgemaakt door water moleculen. Ionen kunnen los voorkomen als paar in een gas. <p></p>
+Elementen die voorkomen als ion heten <i>monoatomische</i> ionen. Moleculen die voorkomen als ion heten <i>polyatomische</i> ionen.<p></p>
+Sommige elementen hebben als ion maar één mogelijke lading:<p></p>
+<ul>
+<li>de alkalimetalen, groep I uit het PSE, hebben de lading +1, en worden aangeduid met een superscript +, bijvoorbeeld $\ce{Li+}$ lithium ion</li>
+<li>de aardalkalimetalen, groep II uit het PSE, hebben de lading +2, en worden aangeduid met een superscript 2+ hun naam wordt aangeduid met de naam van het element met de toevoeging ion, bijvoorbeeld $\ce{Be^2+}$ berylliumion</li>
+<li>de halogenen, groep VII uit het PSE, hebben de lading -1 en worden aangeduid met een superscript -, hun naam is een samenvoeging van de Latijnse stam met ide en de toevoeging -ion, bijvoorbeeld $\ce{F-}$ fluoride-ion</li>
+<li>de zuurstof groep (chalcogenen), groep VI uit het PSE, hebben de lading -2, en worden aangeduid met een superscript 2-, hun naam is een samenvoeging van de Latijnse stam met ide en de toevoeging -ion, bijvoorbeeld $\ce{O^2-}$ oxide-ion</li>
+<li>daarnaast moet je ook nog de lading kennen van de volgende ionen: $\ce{Ag+}$ zilver ion, $\ce{Zn^2+}$ zinkion, $\ce{Ni^2+}$ nikkelion, $\ce{Al^3+}$ aluminiumion, $\ce{Ni^3-}$ nitride-ion, $\ce{P^3-}$ fosfide-ion
+</li>
+</ul><p></p>
+
+De volgende elementen hebben meerdere mogelijke ladingen:<p></p>
+<ul>
+<li>waterstof kan voorkomen als $\ce{H+}$ waterstofion of als $\ce{H-}$ hydride-ion</li>
+<li>het volgende rijtje moet je ook kennen:<p></p>
+<ul>
+<li>$\ce{Cu+}$ koper(I)ion en $\ce{Cu^2+}$ koper(II)ion</li>
+<li>$\ce{Hg^+}$ kwik(I)ion en $\ce{Hg^2+}$ kwik(II)ion</li>
+<li>$\ce{Au+}$ goud(I)ion en $\ce{Au^2+}$ goud(II)ion</li>
+<li>$\ce{Fe^2+}$ ijzer(II)ion en $\ce{Fe^3+}$ ijzer(III)ion</li>
+<li>$\ce{Co^2+}$ cobalt(II)ion en $\ce{Co^3+}$ cobalt(III)ion</li>
+<li>$\ce{Cr^2+}$ chroom(II)ion, $\ce{Cr^3+}$ chroom(III)ion, $\ce{Cr^6+}$ chroom(VI)ion</li>
+<li>$\ce{Sn^2+}$ tin(II)ion en $\ce{Sn^4+}$ tin(IV)ion</li>
+<li>$\ce{Pb^2+}$ lood(II)ion en $\ce{Pb^4+}$ lood(IV)ion</li>
+<li>$\ce{Mn^2+}$ mangaan(II)ion en $\ce{Mn^4+}$ mangaan(IV)ion
+</li>
+</ul><p></p>
+</li>
+</ul><p></p>
+
+De volgende polyatomische ionen moet je kennen:<p></p>
+<ul>
+<li>$\ce{NH^4+}$ ammoniumion, het enige positieve polyatomisch ion</li>
+<li>$\ce{NO2-}$ nitrietion,  \ce{NO3-} nitraation</li>
+<li>$\ce{ClO-}$ hypochloriet, $\ce{ClO2-}$ chloriet, $\ce{ClO3-}$ chloraat, $\ce{ClO4-}$ perchloraat,</li>
+<li>$\ce{OH-}$ hydroxide-ion</li>
+<li>$\ce{CN-}$ cyanide-ion</li>
+<li>$\ce{ClO3-}$ chloraation</li>
+<li>$\ce{CH3COO-}$ acetaation of afgekort \ce{Ac-}</li>
+<li>$\ce{MnO4-}$ permanganaation</li>
+<li>$\ce{CO3^2-}$ carbonaation</li>
+<li>$\ce{O2^2-}$ peroxide</li>
+<li>$\ce{SO3^2-}$ sulfietion, $\ce{SO4^2-}$ sulfaation, $\ce{S2O3^2-}$ thiosulfaation</li>
+<li>$\ce{C2O4^2-}$ oxalaation</li>
+<li>$\ce{CrO4^2-}$ chromaation</li>
+<li>$\ce{Cr2O7^2-}$ dichromaation</li>
+<li>$\ce{PO4^3-}$ fosfaation</li>
+<li>$\ce{HC2O4^-}$ waterstofoxalaation</li>
+<li>$\ce{HCO3^2-}$ waterstofcarbonaation</li>
+<li>$\ce{HSO3^-}$ waterstofsulfietion, $\ce{HSO4^-}$ waterstofsulfaation</li>
+<li>$\ce{HPO4^2-}$ monowaterstoffosfaation, $\ce{H2PO4^-}$ diwaterstoffosfaation
+</li>
+</ul><p></p>
+
+<h3 id='h3_3'>Metaalbinding</h3>
+In metalen worden de losse atomen bij elkaar gehouden omdat een aantal elektronen, de vrije elektronen, zich kunnen losmaken van het atoom. Hierdoor ontstaan positief geladen atomen, en deze worden bij elkaar gehouden door de negatief geladen elektronen die zich hebben losgemaakt en tussen de atomen bewegen. De atomen vormen een <i>metaalrooster</i>. Deze binding heet een <i>metaalbinding</i>. De metaalbinding komt alleen voor bij metaal elementen.<p></p>
+<p></p>
+<p></p>
+
+</section>
+<section>
+
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

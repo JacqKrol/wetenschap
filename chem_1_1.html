@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		permille:['{}^\\text{o}\\mkern-5mu/\\mkern-3mu_\\text{oo}',0],
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+ <a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+ <!--menuend-->
+ <!--navstart-->
+ <a href="chem_1_1_2.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a>  
+ <!--navend-->
+ </div>
+<h1>Samenstelling van Stoffen</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Dalton's Atoomtheorie van Materie</a><li><a href='#h2_2'>Molecuul Formule</a><li><a href='#h2_3'>Mol</a><li><a href='#h2_4'>Concentraties</a><li><a href='#h2_5'>Wetenschappelijke Methode</a><li><a href='#h2_6'>Terminologie</a></li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+
+<h2 id='h2_1'>Dalton's Atoomtheorie van Materie</h2>
+Bijna iedereen kent de chemische formule voor water: $\ce{H2O} $. Twee <i>atomen</i> waterstof, $\ce{H}$, gecombineerd met één atoom zuurstof, $\ce{O} $, vormen samen een <i>molecuul</i> van water<sup class='footnote'><a href = '#fn1' id = 'fnref1'><b>1</b></a></sup>. Deze formule werd ontdekt door Cavendish in 1781. Het is niet vanzelfsprekend om deze formule af te leiden. In dit artikel laten we zien hoe geleidelijk deze kennis is afgeleid uit experimenten en met logische deductie. Deze manier van werken is kenmerkend voor de moderne wetenschap en wordt de <i>wetenschappelijke methode</i> genoemd.<p></p>
+De Grieken dachten dat water één van de elementaire soorten materie was, <i>elementen</i>, en dat alle materie was samengesteld uit de volgende 4 elementen: aarde, water, lucht, vuur. Dit idee van het bestaan van elementen waaruit alle andere stoffen door een bepaalde combinatie zijn opgebouwd is nog steeds van toepassing. Echter inmiddels weten we welke stoffen de elementen zijn. Het heeft lang geduurd tot in de 18de eeuw dat men dacht dat vuur ook een element was. Alleen door systematisch onderzoek werden uiteindelijk de elementen ontdekt.<p></p>
+Het was een lange zoektocht voordat de scheikundige in staat was om de werkelijke samenstelling van de materie uit elementen te bepalen. De experimenten van scheikundigen in de 18e en 19e eeuw leidden tot de ontdekking van de wetten van de samenstelling van materie. De eerste stap die gezet moest worden is om via filteren, indampen en destilleren een <i>stof</i> te <i>scheiden</i> in andere stoffen. Hier komt het woord scheikunde vandaan. Dit impliceerde dat de betreffende stof een <i>mengsel</i> is van andere bestanddelen met elk een verschillende dichtheid (filteren) en kookpunt (indampen/destilleren).  Stoffen met een unieke <i>dichtheid</i> <sup class='footnote'><a href = '#fn2' id = 'fnref2'><b>2</b></a></sup> en <i>smeltpunt/kookpunt</i> worden <i>zuivere stoffen</i> genoemd. Pas van zuivere stoffen kan men verder onderzoeken hoe ze zijn opgebouwd uit elementaire stoffen: <i>elementen</i>. Er is een belangrijk verschil tussen een mengsel en een zuivere stof. De eigenschappen van een mengsel zijn als het ware een gewogen gemiddelde van de eigenschappen van zijn bestanddelen. Als men de verhouding verandert veranderen ook de eigenschappen. Een zuivere stof heeft altijd dezelfde eigenschappen, die het mogelijk maakt hieraan de zuivere stof te herkennen.<p></p>
+Als een zuivere stof een unieke dichtheid heeft <sup class='footnote'><a href = '#fn3' id = 'fnref3'><b>3</b></a></sup>, dan zullen we als we deze stof in steeds kleinere en kleinere stukjes snijden eindigen met het kleinste stukje van die stof. Natuurlijk is dit praktisch niet mogelijk, zeker niet in de 18de en 19de eeuw, maar laten we aannemen dat zo'n kleinste stuk, deeltje, wel bestaat. De Grieken noemde dit kleinste deeltje zo'n 400 jaar V.Chr. een atoom, wat staat voor ondeelbaar. Als zo'n kleinste deeltje van een zuivere stof bestaat is het ook redelijk om aan te nemen dat elk van deze deeltjes dezelfde dichtheid heeft en dus heeft elk deeltje ook dezelfde massa en neemt het dezelfde hoeveelheid ruimte in beslag. De massa van de vaste stof is dan de som van de massa's van deze deeltjes en het volume is het volume van de deeltjes<sup class='footnote'><a href = '#fn4' id = 'fnref4'><b>4</b></a></sup>. We veronderstelden nu dat een stof is samengesteld uit zeer kleine <i>discrete deeltjes</i> in plaats van te zijn samengesteld uit iets van een continue aard. Om deze veronderstelling te rechtvaardigen, constateren we dat een zuivere vaste stof door verwarming kan overgaan van een vaste stof naar een vloeistof en van een vloeistof naar een gas. In elk van deze toestanden (<i>aggregatie toestanden</i>) van de stof blijft de totale massa constant. Het moet dus zo zijn dat de stof bestaat uit afzonderlijke deeltjes waarvan de onderlinge binding afneemt (en dus hun onderlinge afstand wordt groter) als de temperatuur stijgt. In de gasvormige toestand zien we de deeltjes zelfs niet meer. Dit bevestigt onze veronderstelling dat deze deeltjes discreet zijn en onzichtbaar voor het blote oog. We hebben nu voldoende onderbouwing om te concluderen dat een zuivere stof bestaat uit zeer kleine afzonderlijke deeltjes met elk dezelfde dichtheid. Deze deeltjes worden samengehouden in de vaste en vloeibare toestand door een kracht van een grootte die uniek is voor de stof. Waardoor deze bindingen doorbroken worden bij een voor elke zuivere stof unieke temperatuur. Deze kleine deeltjes bepalen tezamen alle eigenschappen van de zuivere stof. Als we een mengsel hebben zijn de eigenschappen een gevolg van de eigenschappen van de samenstellende zuivere stoffen.<p></p>
+Chemici moesten nu beter begrijpen wat deze kleine deeltjes zijn. Met andere technieken, <i>chemische reacties</i>, konden scheikundigen sommige zuivere stoffen in verschillende soorten stoffen <i>ontbinden</i>. Let op dit ontbinden van stoffen door een chemische reactie is anders dan het scheiden van stoffen in een mengsel. Een chemische reactie gaat vaak gepaard met één of meer van de volgende verschijnselen: kleur verandering, gasbellen, vorming van een neerslag van een vaste stof of kristallen, temperatuurverandering.
+Zuivere stoffen die zijn opgebouwd uit andere zuivere stoffen heten <i>verbindingen</i>. Zuivere stoffen die niet verder ontleed kunnen worden door chemische reacties zijn de <i>elementen</i> waaruit verbindingen zijn opgebouwd. De deeltjes van een verbinding worden <i>moleculen</i> genoemd en de deeltjes van een element <i>atomen</i>. Overigens zullen we later leren dat sommige verbindingen niet uit moleculen bestaan maar uit <i>ionen</i><sup class='footnote'><a href = '#fn5' id = 'fnref5'><b>5</b></a></sup>. Dit hele proces om stoffen onder te verdelen in mengsels, verbindingen en elementen vereiste vele experimenten, gedurende de hele 18de en 19de eeuw. <i>Antoine-Laurent Lavoisier</i>, de grondlegger van de moderne scheikunde, bepaalde in de 18e eeuw met experimenten en precieze metingen al 33 elementen in zijn <i>Elementary Treatise on Chemistry</i>. Elk element heeft een <i>unieke eigenschap</i> die kan worden gemeten met een natuurlijk getal. Later zullen we leren dat dit het aantal protonen in de kern van een atoom is (Ernest Rutherford ontdekte het in 1919). Door de elementen te rangschikken op basis van atoommassa, (het lichtste element is waterstof), merkten de scheikundigen uit de 19de eeuw dat niet alle plaatsen bezet waren en dit stimuleerde hen om elementen te zoeken om de open plaatsen op te vullen. Uiteindelijk leidde dit tot de ontdekking van alle mogelijke stabiele elementen die in de natuur voorkomen. Het is overigens verwonderlijk dat alle theoretisch mogelijke elementen ook op aarde voorhanden zijn. Tegenwoordig zijn de elementen gerangschikt in het <i>periodiek systeem der elementen</i> gebaseerd op het werk van de Russische scheikunde professor Dmitri Mendelejev. Later zullen we dit periodiek systeem der elementen diepgaander bespreken en zien dat het ook tegenwoordig nog een belangrijke rol in de scheikunde speelt.<p></p>
+Op basis van zijn experimenten ontdekte Lavoisier dat <i>massa behouden blijft</i> in chemische reacties. In veel van deze reacties waren onzichtbare gassen betrokken en Lavoisier slaagde er in om rekening te houden met de massa van alles wat er in gaat en de massa van alles dat uit de reactie komt. Bij alle chemische reacties bleek altijd dat de massa van de stoffen die in de reactie terechtkomt (<i>reactanten</i>) en de massa van de stoffen die uit de reactie komen (<i>producten</i>) hetzelfde zijn:
+\[
+\sum_r^n m_r = \sum_p^m m_p \;, \text{m = massa, r = reactant en p = product}
+\]
+Aangezien elke reactant en elk product een verbinding of een element is en elke verbinding uit elementen bestaat, impliceert deze wet ook dat de massa van elk element voor en na de reactie hetzelfde is:<p></p>
+\[
+\sum_i^n m_e= \sum_i^n m_e\;, \text{ m=mass, i=element}
+\]
+Dit toont aan dat een chemische reactie feitelijk een <i>herschikking van elementen</i> is.<p></p>
+Gebaseerd op experimenten werden een aantal wetten geformuleerd:<p></p>
+
+<ol>
+<li>De Franse scheikundige Joseph Proust formuleerde:<p></p>
+
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>Wet</h5></dt>
+<dd class='mathplain'>
+<b>Wet van de Constante Massaverhoudingen</b>
+<i>
+Als twee of meer stoffen reageren en een verbinding vormen dan gebeurt dat telkens in dezelfde massaverhoudingen.
+</i>
+</dd>
+</dl>
+Bijvoorbeeld de elementen waterstof, $\ce{H}$, en zuurstof, $\ce{O}$, zijn nodig in de massaverhouding 1:8 om waterdamp te vormen:
+\[
+\text{18 g water}  \to  \text{ 2 g waterstof} + \text{ 16 g zuurstof}
+\]</li>
+<li>De Engelse scheikundige Dalton formuleerde in 1803:<p></p>
+
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>Wet</h5></dt>
+<dd class='mathplain'>
+<b>Wet van de Meerdere Verhoudingen</b>
+<i>
+Als twee elementen samen kunnen reageren tot de vorming van meer dan één verbinding, dan zal de massa-verhouding van één van de elementen terwijl de massa van het andere element constant wordt gehouden, een massa-verhouding zijn van kleine gehele getallen.
+</i>
+</dd>
+</dl>
+Bijvoorbeeld waterstof en zuurstof kunnen water en waterstofperoxide vormen:
+\[
+\begin{align*}
+\text{18 g water}  &\to  \text{ 2 g waterstof } + \text{ 16 g zuurstof }  \\
+\text{34 g waterstof peroxide}  &\to  \text{ 2 g waterstof } + \text{ 32 zuurstof }
+\end{align*}
+\]
+De massa-verhouding van zuurstof in de twee verbindingen bedraagt: 16:32=1:2. Als we uitgaan van discrete deeltjes betekent dit dat waterstofperoxide twee maal zoveel deeltjes zuurstof bevat dan water. Deze wet geldt niet voor zogenaamde <i>niet-stoichiometrische verbindingen</i>.</li>
+<li>De Franse scheikundige Gay-Lussac formuleerde:<p></p>
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>Wet</h5></dt>
+<dd class='mathplain'>
+<b>Wet van de Gas Volumes</b>
+<i>
+De volume-verhouding tussen gassen die reageren in een chemische reactie is een verhouding in kleine gehele getallen.
+</i>
+</dd>
+</dl>
+Bijvoorbeeld:
+\[
+\text{ 2 L waterstof deeltjes + 1 L zuurstof deeltjes} \ce{->}  \text{ 2 L waterdamp deeltjes}
+\]</li>
+<li>De Italiaanse scheikundige Avogadro formuleerde:<p></p>
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>Wet</h5></dt>
+<dd class='mathplain'>
+<b>Avogadro's Wet</b>
+<i>
+Gelijke volumes van een gas bevatten hetzelfde aantal deeltjes als de volumes worden gemeten bij dezelfde temperatuur en druk.
+</i>
+</dd>
+</dl>
+</li>
+</ol><p></p>
+
+In 1808 vatte de Engelse scheikundige Dalton deze experimentele resultaten samen in zijn theorie van atomen:<p></p>
+<ul>
+<li>elke stof bestaat uit ondeelbare <i>discrete</i> extreem kleine deeltjes genaamd <i>atomen</i></li>
+<li>alle atomen van een <i>element</i> hebben dezelfde eigenschappen (massa, grootte ), atomen van verschillende elementen hebben verschillende eigenschappen</li>
+<li>atomen kunnen aan elkaar kleven in hele-getallen ratio's om identieke deeltjes te vormen, <i>moleculen</i>, met unieke eigenschappen die niet direct afleidbaar zijn uit de individuele eigenschappen van de atomen van de elementen waaruit ze zijn opgebouwd</li>
+<li>in een <i>chemische reactie</i> worden atomen herschikt, atomen worden nooit gemaakt of vernietigd in een chemische reactie
+</li>
+</ul><p></p>
+
+<h2 id='h2_2'>Molecuul Formule</h2>
+Gebaseerd op het inzicht dat moleculen zijn opgebouwd uit atomen van elementen wilden scheikundigen het aantal atomen vaststellen van elk element in een molecuul. In een molecuul formule geven we het aantal atomen in het molecuul weer, zoals bijvoorbeeld in de molecuul formule voor water: $\ce{H2O}$ . Om dit mogelijk te maken moet men de <i>atoommassa</i> van de elementen kennen. De atoommassa van het atoom van element X  is de ratio van de massa van het atoom van X en die van het atoom van een referentie element. Vandaar dat men ook wel spreekt van de <i>relative atoommassa</i>. Echter het woord relatief is eigenlijk overbodig omdat elke meting van een grootheid, zoals massa, altijd relatief is t.o.v. van een gekozen standaard eenheid. Nu kiezen wij voor massa meestal de kilogram als standaard eenheid en daarom hanteert men het begrip relatieve atoommassa om dit onderscheid duidelijk te maken. Scheikundigen kozen als referentie element waterstof, later werd dit zuurstof en nu is koolstof het referentie element.  Om de atoommassa te kunnen bepalen, bijvoorbeeld van waterstof en zuurstof, moeten we van een verbinding tussen deze elementen, bijvoorbeeld water, de massaverhouding van de elementen kennen alsmede de verhouding tussen het aantal atomen van de elementen. Nu hebben we eerder gezien dat de massaverhouding waterstof deeltjes:zuurstof deeltjes=1:8. Op basis van Avogadro's wet weten we dat 2 waterstof deeltjes reageren met 1 zuurstof deeltje en vervolgens 2 waterdamp deeltjes vormen. Aangezien 1 zuurstof deeltje niet in 2 water deeltjes kan voorkomen, moet dit betekenen dat een zuurstof deeltje uit tenminste 2 zuurstof atomen bestaat. Scheikundigen dachten aanvankelijk dat de gasvormige elementen als losse atomen voorkomen maar het blijkt dat de meeste gasvormige elementen als diatomisch molecuul voorkomen ($\ce{C , F , N , H , O , I , B}$). Eigenlijk komen alleen de <i>edelgas</i> elementen als losse atomen voor. Dus ook een waterstof deeltje is diatomisch. We kunnen dus de reactie weergeven als:
+\[
+\ce{2 H2 + O_2 -> 2 H2O}
+\]
+Combineren we dit met de massaverhouding waterstof:zuurstof=1:8 in water dan betekent dit dat de relatieve atoommassa waterstof:zuurstof=1:16. Als men eenmaal de relatieve massa van de elementen uit een verbinding kent kan men uit de massaverhouding de ratio tussen het aantal atomen afleiden en hoeft men geen gebruik te maken van de volume wet van Avogadro.<p></p>
+Ook voor vaste stoffen die reageren met een gas kunnen we deze procedure volgen om de atoommassa vast te stellen. Bijvoorbeeld
+\[
+\text{1 L zuurstof (g) + koolstof (s)} \ce{->} \text{2 L X (g) }
+\]
+We duiden de aggregatietoestand van een stof in een reactie aan met: (g)=gas, (l)=vloeistof, (s)=vaste stof. We kunnen dus concluderen dat X bestaat uit een onbekend aantal koolstof atomen, $\ce{Cn}$, en 1 zuurstof atoom. Verder blijkt uit meting dat de massa van 1 L X gelijk is aan  0.875 keer de massa van 1 L zuurstof. De relatieve massa van zuurstof t.o.v. waterstof is 16, dus de relatieve massa van X = 0.875 x 16 x 2 = 28 dan volgt dat de atoommassa van $\ce{Cn}$ = 28 - 16 = 12. Echter om de atoommassa van $\ce{C}$ te berekenen moeten we $n$ kennen. Uit vele experimenten blijkt telkens dat de relatieve atoommassa van $C$ in de verbindingen een veelvoud is van 12. We kunnen dus stellen dat de atoommassa van koolstof 12 moet zijn. De formule voor X is dan $\ce{CO}$.<p></p>
+Dit is de procedure die rond 1850 werd gebruikt om voor de bekende elementen de atoommassa's vast te stellen. De atoommassa wordt de <b>atomaire massa-eenheid (amu)</b> ($\text{u}$) genoemd. Het stelt scheikundige in staat om uit de massaverhoudingen van een stof de molecuul formule te bepalen.<p></p>
+Nu speelt er bij het bepalen van de atoommassa nog een ander probleem. Atomen van elementen hebben niet allemaal dezelfde massa, dit komt omdat van veel elementen <b>isotopen</b> voorkomen die een afwijkende massa hebben. Dit komt omdat het aantal neutronen in een atoomsoort kan verschillen (het aantal protonen is voor elke atoomsoort gelijk). Door rekening te houden met de natuurlijk voorkomende verhouding van de isotopen van een element kan men een gewogen gemiddelde atoommassa berekenen. Deze atoommassa noemt men de <i>gemiddelde atoommassa</i>. In het Periodiek Systeem van de Elementen is de vermelde atoommassa een gemiddelde atoommassa van het betreffende element.<p></p>
+Bijvoorbeeld de meest voorkomende isotopen van koolstof zijn $\ce{12C} (98.892\%,12\;\text{u})$, $\ce{13C} (1.108\%,13.00335\;\text{u})$ en $\ce{14C} (2\times10^{-10},14.00317\;\text{u})$, tussen haakjes staat het percentage waarin ze voorkomen en hun atoommassa. Dan volgt de gemiddelde atoommassa uit de volgende berekening:
+\[
+0.98892\times 12\;\text{u} + 0.01108\times 13.00335\;\text{u} + 2 \times 10^{-12} \times 14.00317\;\text{u} = 12.011\;\text{u}
+\]<p></p>
+Gegeven de massaverhoudingen voor een verbinding en de atoommassa van de elementen kunnen we eenvoudig de <i>empirische formule</i> vinden. De empirische formule van een verbinding geeft niet het <i>aantal</i> atomen van de elementen weer, maar de <i>verhouding</i> tussen het aantal atomen van de elementen weer. Stel een verbinding heeft de volgende <i>massapercentage verhoudingen</i>: $40\%\ce{C},53.3\%\ce{O},6.7\%\ce{H}$. Dan volgt hieruit voor de verhouding van het aantal atomen van elk element in deze samenstelling:
+\[
+\frac{0.4}{12}\ce{C}:\frac{0.533}{16}\ce{O}:\frac{0.067}{1}\ce{H}=3.33:3.33:6.7=1:1:2
+\]
+en dus is de empirische formule $\ce{COH_2}$. Om de molecule formule te bepalen, moeten we de <i>moleculaire massa</i> van de verbinding bepalen met de wet van gasvormige volumes en de wet van Avogadro. Stel dat deze is 60 amu, dan is de molecuul formule $\ce{C2O2H4}$. Dit volgt uit de berekening van de <i>molecuulmassa</i><sup class='footnote'><a href = '#fn6' id = 'fnref6'><b>6</b></a></sup> :$2\times 12 + 2\times 16 + 4\times 1 = 60$.<p></p>
+<h2 id='h2_3'>Mol</h2>
+De coëfficiënten die worden gebruikt in de molecuul formule en chemische vergelijkingen, <i>stoichiometrische coëfficiënten</i>, verwijzen naar het aantal deeltjes. Maar scheikundigen meten hoeveelheden materie niet in aantal deeltjes maar in gram. We moeten een handige conversie vinden tussen het aantal deeltjes en het aantal gram. De vergelijking $\ce{2H2 + O2 -> 2H2O}$ wordt gelezen als: we nemen 2 moleculen $\ce{H2}$ en één molecuul $\ce{O2}$ om 2 moleculen $\ce{H2O}$ te maken. Natuurlijk geldt deze relatie ook als we in plaats daarvan $n$ maal zoveel moleculen nemen. In dat geval vermenigvuldigen we beide zijden van de vergelijking met $n$: $\ce{2nH2 + nO2 -> 2nH2O}$. We kiezen een bepaalde $n$ aangeduid met: $N_A$ <b>Avogadro's nummer</b> <sup class='footnote'><a href = '#fn7' id = 'fnref7'><b>7</b></a></sup>, zodanig dat het aantal deeltjes gelijk is aan het aantal deeltjes in $12 \;\text{gram}$ koolstof<sup class='footnote'><a href = '#fn8' id = 'fnref8'><b>8</b></a></sup>. De eenheid voor dit aantal noemen we <b>mol</b>. Dan hebben we een eenvoudige conversie tussen aantal deeltjes en gram (en omgekeerd):
+\[
+12\; \text{gram} = N_A \times 12 \text{u} = 1 \text{ mol } \times 12 \text{u}
+\]
+Dus als we nu 1 mol (dat zijn dus $N_A$ deeltjes) zuurstof moleculen nemen dan is hun massa in gram, 32, gelijk aan de <i>molecuulmassa</i> van een zuurstof molecuul. Immers $N_A \times 32\;\text{u} = 32\;\text{gram}$ ofwel $1\;\text{mol}\;\ce{O2} = 32\;\text{gram}\;\ce{O2}$. We noemen de massa in gram van 1 mol van een stof de <b>molaire massa</b> of soms ook <b>molmassa</b> genoemd. We kunnen eenvoudige een massa in gram converteren naar een aantal mol en omgekeerd, bijvoorbeeld:
+\[
+600\;\text{gram} \; \ce{O2} = 600\;\text{gram} \ce{O2} \; \frac{1\; \text{mol} \; \ce{O2}}{32\;\text{gram}\;\ce{O2}}=18.75\;\text{mol}\;\ce{O2}
+\]
+\[
+4\;\text{mol} \; \ce{O2} = 4\;\text{mol} \; \ce{O2} \times \frac{32\;\text{gram}\;\ce{O2}}{1\; \text{mol} \; \ce{O2}}=128\;\text{gram}\;\ce{O2}
+\]
+We kunnen de stoichiometrische coëfficiënten nu opvatten als het aantal mol van dat deeltje. We kunnen het aantal mol omrekenen naar een massa in gram door dit te vermenigvuldigen met de molaire massa, welke numeriek gelijk is aan de molecuulmassa in $\text{u}$ van één deeltje.<p></p>
+Pas in de 20de eeuw slaagde men erin om Avogadros-getal te bepalen. Nauwkeurige bepaling van Avogadros-getal vereisen de meting van een enkele grootheid op zowel de atomaire als de macroscopische schaal met dezelfde eenheid. Dit werd voor het eerst mogelijk toen de Amerikaanse natuurkundige Robert Millikan de lading van een elektron bepaalde. De lading van een mol van elektronen was al enige tijd bekend en is de constante die de Faraday wordt genoemd. De beste schatting van de waarde van een Faraday, volgens het National Institute of Standards and Technology (NIST), is 96.485.3383 coulomb per mol elektronen. De beste schatting van de lading van een elektron op basis van moderne experimenten is $1.60217653 \times 10^{-19}$ coulomb per elektron. Als je de lading van een mol elektronen deelt door de lading van een enkel elektron, verkrijg je een waarde van Avogadros-aantal:
+\[
+N_A=\text{deeltjes per mol}=6,02214154 \times 10^{23}
+\]
+We kunnen hiermee ook de atoommassa van het koolstof 12 isotoop uitrekenen. Scheikundigen hebben $\tfrac{1}{12}$ van deze massa als de referentie eenheid voor atoommassa gedefinieerd:
+\[
+12 \text{u} = \frac{12.0\;\text{gram}}{6,02214154 \times 10^{23}}=1.992646623\times 10^{-26} \text{kilogram}
+\]
+derhalve
+\[
+1 \text{u} = 1,66054 \times 10^{-27} \text{kilogram}
+\]<p></p>
+<h2 id='h2_4'>Concentraties</h2>
+Vaak werken scheikundigen met een vloeistof, bijvoorbeeld water, waarin een stof is opgelost, bijvoorbeeld zout. De vloeistof wordt dan een <i>oplossing</i> (water+zout) genoemd en bestaat uit een <i>opgeloste stof</i> (zout) en het <i>oplosmiddel</i> (water).<p></p>
+Er bestaan verschillende manieren om de concentratie van de opgeloste stof in de oplossing uit te drukken:<p></p>
+
+<ol>
+<li><b>massa of volume percentage</b>:
+\[
+\frac{\text{deel}}{\text{geheel}}\times 100\%
+\]</li>
+<li><b>massa of volume promillage</b>:
+\[
+\frac{\text{deel}}{\text{geheel}}\times 1000\permille
+\]</li>
+<li><b>deeltjes per miljoen</b> (ppm)  / per biljoen (ppt):
+\[
+\text{ppm}=\frac{\text{deel}}{\text{geheel}}\times 10^6
+\]</li>
+<li><b>deeltjes per miljard</b> (ppb)
+\[
+\text{ppb}=\frac{\text{deel}}{\text{geheel}}\times 10^9
+\]</li>
+<li><b>deeltjes per biljoen</b> (ppt)
+\[
+\text{ppt}=\frac{\text{deel}}{\text{geheel}}\times 10^{12}
+\]</li>
+<li><b>molariteit</b> (M) gedefinieerd als het aantal mol van de opgeloste stof per volume-eenheid van de oplossing:
+\[
+M =\frac{\text{mol}}{\text{liter}}
+\]</li>
+<li><b>gram per liter</b> ($\text{gram}\text{L}^{-1}$)
+</li>
+</ol><p></p>
+
+De eenheid van volume in S.I. is $\text{m}^3$, echter dit is een te grote unit voor scheikundigen vandaar dat men vaak werkt met de liter $1\;\text{L} = 1\;\text{dL}^3=10^{-3}\;\text{m}^3$ of centiliter $1\;\text{cL}=10^{-2}\;\text{L}$ of milliliter $1\;\text{mL}=10^{-3}\text{L}=1\;\text{cm}^3=1\;\text{cc}$.<p></p>
+<h2 id='h2_5'>Wetenschappelijke Methode</h2>
+In het voorgaande hebben we geleerd hoe scheikundigen in de 17de en 18de eeuw het eeuwenoude denkbeeld van de Grieken dat er 4 elementen waren: lucht, water, aarde en vuur, konden weerleggen. Dit vergde geen geniaal idee, maar het nauwgezet uitvoeren van vele experimenten en dan op basis van de uitkomsten theorieën opstellen en die weer bijstellen op basis van verder onderzoek. Dit werk werd door vele wetenschappers over vele jaren uitgevoerd. Soms werden daarbij verkeerde conclusies getrokken, maar de werkwijze garandeert dat een verkeerde conclusie zichzelf op enig moment tegenspreekt zolang men maar blijft zoeken en kritisch nadenken. Het trekken van verkeerde conclusies en daarna verwerpen van deze conclusies is een normale gang van zaken. Kennis ontstaat door proberen en fouten maken. Dit proces noemen we tegenwoordig de wetenschappelijke methode. Alleen dankzij deze manier van werken konden denkbeelden die millennia lang bestonden worden verworpen en nieuwe theorieën worden gevormd.
+Vaak hebben we het idee dat de wetenschap leunt op het werk van enkele grote genieën, maar dit is niet juist. Deze genieën konden hun theorieën opstellen alleen door de feiten die verzameld waren door vele andere wetenschappers over vele jaren. Zij waren weliswaar de eersten die de feiten zodanig konden ordenen dat ze als puzzelstukjes in een theorie paste. Het feit dat sinds de invoering van de wetenschappelijke methode zo'n snelle vooruitgang is bereikt in onze wetenschappelijke kennis is het bewijs van het succes van deze methode. Als we het zo bezien dan lijkt de wetenschappelijke methode op de evolutie van leven op aarde. Zoals het leven zich aanpast aan zijn omgeving, zo past de theorie zich aan aan de feiten.<p></p>
+
+<h2 id='h2_6'>Terminologie</h2><p></p>
+
+<ul>
+<li><b>isotoop</b> atomen van hetzelfde element, en dus met hetzelfde aantal protonen, waarin het aantal neutronen in de atoomkern verschilt.</li>
+<li><b>atoommassa</b> de atoommassa is de massa van een atoom, uitgedrukt in atomaire massa-eenheden (u). Elk isotoop van een scheikundig element heeft een andere atoommassa. De atoommassa van een element als geheel is gedefinieerd als het gewogen gemiddelde van de atoommassa's van alle natuurlijke isotopen, waarbij de relatieve aanwezigheid, de mate waarin elk isotoop verhoudingsgewijs voorkomt op aarde, de wegingsfactor is. Dit gemiddelde wordt in tabellen meestal aangeven met de "relatieve atoommassa".</li>
+<li><b>molaire massa (MM)</b> de massa in gram van 1 mol van een stof heet de molaire massa van die stof</li>
+<li><b>molecuulmassa</b>, N de massa van één molecuul van een stof, uitgedrukt in atomaire massa-eenheden (u). De molecuulmassa is de som van de atoommassa's van de afzonderlijke atomen waaruit het molecuul is opgebouwd. Omdat de atomen van een element meestal een mengsel zijn van verschillende isotopen, gaat men daarbij standaard uit van de normale verhouding van deze isotopen voor elk element.</li>
+<li><b>molariteit M</b>, het aantal mol van de opgeloste stof per volume-eenheid van de oplossing.<p></p>
+</li>
+</ul><p></p>
+<p></p>
+<p></p>
+
+</section>
+<section>
+<h2>Voetnoten</h2>
+<ol><li id='fn1'> Het Periodiek Systeem van Elementen toont alle elementen met hun symbool en informatie over het atoom, zie <a href='https://www.ptable.com/?lang=nl'>Periodiek Systeem der Elementen</a><a href='#fnref1' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn2'> $\rho=\frac{m}{V}$ massa gedeeld door volume<a href='#fnref2' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn3'> bij een bepaalde temperatuur en druk<a href='#fnref3' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn4'>  voor een klein deel zal het volume ook bepaald worden door de ruimte tussen de deeltjes<a href='#fnref4' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn5'> elektrisch geladen deeltjes<a href='#fnref5' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn6'> sommeer de atoommassa van elk element uit de verbinding door de atoommassa van het element te vermenigvuldigen met het aantal atomen van dat element<a href='#fnref6' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn7'> deze naam werd toegewezen aan Avogadro vanwege zijn hypothese dat een gelijk volume gassen evenveel deeltjes bevat<a href='#fnref7' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn8'> om precies te zijn 12 gram van het koolstof 12 isotoop $\ce{12C}$<a href='#fnref8' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+</ol>
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

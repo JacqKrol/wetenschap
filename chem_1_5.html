@@ -1,0 +1,277 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		permille:['{}^\\text{o}\\mkern-5mu/\\mkern-3mu_\\text{oo}',0],
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+<a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+<!--menuend-->
+ <!--navstart-->
+<a href="" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1_4.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a> 
+<!--navend-->
+ </div>
+<h1>Organische Scheikunde</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Wat is Organische Scheikunde</a><li><a href='#h2_2'>Alkanen</a><li><a href='#h2_3'>Alkenen</a></li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+<h2 id='h2_1'>Wat is Organische Scheikunde</h2>
+Organische scheikunde of koolstofchemie is de scheikunde van verbindingen met het koolstofatoom. Het koolstofatoom heeft een covalentie <sup class='footnote'><a href = '#fn1' id = 'fnref1'><b>1</b></a></sup> van 4. Dit geeft koolstof een grote flexibiliteit om <b>moleculaire stoffen</b> te maken met andere niet-metaalatomen. Een koolstofatoom kan zich ook gemakkelijk binden met een ander koolstofatoom en op deze manier een <b>keten</b> of <b>ring</b> vormen. Deze unieke eigenschap maakt koolstof een essentieel ruggengraat-atoom voor de vorming van macromoleculen. Naast koolstof zijn de andere meest voorkomende elementen in organische verbindingen waterstof (valentie 1), zuurstof (valentie 2), stikstof (valentie 3), zwavel (valentie 2) en halogenen (valentie 1).<p></p>
+Dit levert een groot aantal mogelijke moleculen op. Het classificeren van verschillende soorten van organische moleculen is daarom belangrijk voor een verdere studie. De meest eenvoudige organische moleculen zijn de <b>koolwaterstoffen</b> die bestaan uit alleen koolstof en waterstof atomen en soms een enkel ander atoom. Voorbeelden van koolwaterstoffen zijn de fossiele brandstoffen, zoals methaan en butaan, maar ook de plastics. In het onderstaande schema kun je zien in welke subgroepen we deze koolwaterstoffen weer kunnen onderverdelen. Daarbij maken we allereerst een onderscheid tussen koolwaterstoffen met en zonder een ringstructuur. Koolwaterstoffen met een maximaal aantal waterstofatomen bestaan alleen uit enkelvoudige bindingen en heten <b>verzadigde</b> koolwaterstoffen en anders zijn het <b>onverzadigde</b> koolwaterstoffen.<p></p>
+
+<img src='images/koolwaterstoffen.png' title ='Koolwaterstoffen' alt='Koolwaterstoffen'>
+<p></p>
+Naast de koolwaterstoffen zijn er nog vele andere groepen van organische moleculen. Deze zijn meestal kenmerkend aan de hand van een groep atomen die aan een koolstof atoom zijn gebonden. Dit heet dan een een <b>functionele groep</b>.<p></p>
+De chemische reactiviteit wordt voornamelijk bepaald door deze functionele groepen. Een koolwaterstof heeft weinig andere chemische reactiviteit dan een verbrandingsreactie.<p></p>
+<h2 id='h2_2'>Alkanen</h2>
+Het meest eenvoudige organische molecuul is methaan. Methaan is een alkaan met 1 koolstofatoom.<p></p>
+We kunnen dit molecuul op verschillende manieren weergeven.<p></p>
+
+<ol>
+<li><b>molecuul formule</b>: in een molecuul formule tonen we alleen het <i>aantal atomen</i> van elke soort in het molecuul:
+    \[
+    \ce{CH4}
+    \]</li>
+<li><b>structuur formule</b>: in een structuur formule tonen we het <i>aantal atomen</i> en hun <i>verbindingen</i>, het koolstof atoom is het centrale atoom:
+    
+<img src='images/methaan.png' title ='Methaan' alt='Methaan'>
+</li>
+<li><b>ruimtelijke tekening</b>: in een ruimtelijke tekening tonen we het <i>aantal atomen</i>, hun <i>verbindingen</i> en de <i>ruimtelijke ligging</i> van de atomen, een rechte lijn impliceert een verbinding in hetzelfde vlak, een vet driehoekje een verbinding naar voren, en een gestreepte driehoek een verbinding naar achteren:
+     
+<img src='images/methaan2.png' title ='Methaan' alt='Methaan'>
+</li>
+<li><b>3D model</b>: in een 3D model, ook wel een <i>ball and stick model</i> genoemd, tonen in een ruimtelijke tekening tonen we het <i>aantal atomen</i>, hun <i>verbindingen</i>, de <i>ruimtelijke ligging</i> van de atomen de <i>bindingshoek</i> en de <i>bindingslengte</i>. De bindingshoek tussen twee koolstofverbindingen is 109.5$^\circ$ en het geheel vormt een <i>tetraëder</i>. Een tetraëder bestaat uit 4 gelijkzijdige driehoeken die allen langs de zijden aan elkaar verbonden zijn. In de ruimtelijke structuur van bijvoorbeeld methaan bevindt het C-atoom zich in het centrum van de tetraëder en de 4 H-atomen op de 4 hoekpunten:
+     
+<img src='images/methaan3.png' title ='Methaan' alt='Methaan'>
+
+</li>
+</ol><p></p>
+
+We kunnen alkanen vormen met meerdere koolstofatomen door een waterstof atoom te vervangen door een <b>methyl groep</b>, $\ce{-CH3}$, een methyl is een <b>radicaal</b><sup class='footnote'><a href = '#fn2' id = 'fnref2'><b>2</b></a></sup>. Zo ontstaat uit methaan ethaan $\ce{CH3-CH3}$. Uit ethaan ontstaat propaan $\ce{CH3-CH3-CH3}$ enzovoort.<p></p>
+Een <b>alkylgroep</b> is een functionele groep afgeleid van alkanen. Dergelijke groepen bevatten enkel koolstof- en waterstofatomen en zijn van de vorm $C_nH_{2n+1}$. Ze missen dus een waterstof atoom in vergelijking met het alkaan. Het zijn radicalen. Door ze aaneen te rijgen ontstaan alkanen met lange koolstofketens.<p></p>
+Overigens kunnen deze alkylgroepen zich ook als een tak aan de stam van een alkaan hechten. De stam is dan de langste reeks van koolstofatomen.<p></p>
+Een compact ruimtelijke weergave van een organisch molecuul is de zogenaamde <b>skelet formule</b>. Daarbij geeft men de verbinding tussen twee koolstof atomen met een zig-zag lijn weer zonder daarbij de koolstof en waterstof atomen weer te geven. Zie bijvoorbeeld de skelet formule voor heptaan. Heptaan heeft 7 koolstofatomen en 16=2x3+5x2=7x2+2 waterstofatomen.<p></p>
+
+<img src='images/heptane3.png' title ='Skelet Formule Heptaan' alt='Skelet Formule Heptaan'>
+<p></p>
+
+<img src='images/heptane4.png' title ='Ball and Stick model Heptaan' alt='Ball and Stick model Heptaan'>
+<p></p>
+We kunnen eenvoudig de volgende algemene molecuulformule afleiden voor alkanen: $CH_3-CH_2-...-CH_2CH_3$ waaruit volgt $C_nH_{2n+2}$.<p></p>
+Alkanen eindigen op <i>-aa</i>n en hebben een prefix dat het aantal koolstofatomen aangeeft. Op historische gronden de nummers 1-4 zijn genoemd: <b>meth</b>, <b>eth</b>, <b>prop</b> en <b>but</b> maar vanaf 5 worden de Griekse woorden voor getallen gebruikt<p></p>
+<ul>
+<li>meth: 1</li>
+<li>eth: 2</li>
+<li>prop: 3</li>
+<li>but: 4</li>
+<li>pent: 5</li>
+<li>hex: 6</li>
+<li>hept: 7</li>
+<li>oct: 8</li>
+<li>non: 9</li>
+<li>dec: 10
+</li>
+</ul><p></p>
+Dus de eerste 10 alkanen zijn: methaan, ethaan, propaan, butaan, pentaan, hexaan, septaan, octaan, nonaan, decaan.<p></p>
+Methaan tot aan butaan zijn gassen, pentaan tot ongeveer $\ce{C17H36}$ zijn vloeistoffen, en de rest zijn
+vaste stoffen. De alkanen zijn in het algemeen <i>kleurloos</i> en apolair<sup class='footnote'><a href = '#fn3' id = 'fnref3'><b>3</b></a></sup>.
+Alkanen zijn zeer brandbaar. Zoals alle koolwaterstoffen reageren ze bij ontsteking met zuurstof waarbij kooldioxide en water worden gevormd en er warmte vrijkomt.<p></p>
+<p></p>
+<h2 id='h2_3'>Alkenen</h2>
+We kunnen van een methaan molecuul ook twee waterstofatomen weghalen, zodat een $\ce{CH2=}$ groep ontstaat, en hieraan een atoom met een dubbele binding vastmaken. De ruimtelijke structuur die dan ontstaat is een <i>vlakke driehoek</i> met bindingshoeken van $120^\circ$.<p></p>
+
+<img src='images/1doublebond.png' title ='Dubbele binding' alt='Dubbele binding'>
+<p></p>
+Etheen, $\ce{C2H4}$ of $\ce{C2H=C2H}$ is een alkeen waarbij er een dubbele binding is tussen de twee koolstof atomen.<p></p>
+
+<img src='images/ethylene.png' title ='Etheen' alt='Etheen'>
+<p></p>
+<p></p>
+
+</section>
+<section>
+<h2>Voetnoten</h2>
+<ol><li id='fn1'> het aantal mogelijke atoombindingen, bepaald door het aantal elektronen dat nodig is om de buitenste schil (valentie-elektronen) op te vullen tot 2 of 8 elektronen<a href='#fnref1' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn2'> een deeltje met één of meer ongepaarde elektronen, dus met een oneven aantal elektronen<a href='#fnref2' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+<li id='fn3'> lossen niet op in water<a href='#fnref3' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+</ol>
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

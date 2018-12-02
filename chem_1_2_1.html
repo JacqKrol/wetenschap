@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+<a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+<!--menuend-->
+ <!--navstart-->
+<a href="chem_1_2_2.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1_2.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a> 
+<!--navend-->
+ </div>
+<h1>Mengsels</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Mengsels</a>
+<ul>
+<li><a href='#h3_1'>Homogeen mengsel</a></li>
+<li><a href='#h3_2'>Heterogeen mengsel</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+<h2 id='h2_1'>Mengsels</h2>
+Een <b>mengsel</b> is een stof die bestaat uit verschillende zuivere stoffen. De stof die het meest aanwezig is heet <i>oplossing</i>, De andere stof of stoffen zijn de opgeloste stoffen. Door het mengen ontstaan geen nieuwe stoffen. De aanwezige zuivere stoffen in een mengsel kunnen door fysische processen weer worden gescheiden.<p></p>
+Het <i>scheiden van mengsels</i> is een belangrijk aspect van de scheikunde. Het dankt er zijn naam aan. Om mengsels te scheiden maakt men gebruik van <i>fysische methoden</i> die gebaseerd zijn op de unieke fysische eigenschappen van de verschillende stoffen, zoals kookpunten, deeltjesgrootte, dichtheid of polariteit (elektrische lading). Als we zout en water mengen ontstaat een mengsel waarin het zout is opgelost. De eigenschappen van het mengsel zijn het gemiddelde van de eigenschappen van de stoffen waaruit het mengsel bestaat.<p></p>
+
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>voorbeeld</h5></dt>
+<dd class='mathplain'>
+<b></b>
+<i> <i>Zoutbereiding</i>. Zout komt in opgeloste vorm (natrium en chloride ionen $\ce{Na+ Cl-}$) voor in zeewater. Door verdamping neemt de concentratie van zout in de oplossing toe. Tot een verzadigingspunt is bereikt. Vanaf dat moment scheidt het zout zich in de vorm van kristallen van het water. We zeggen het zout slaat neer in de oplossing. De oplossing die achterblijft bevat nog steeds zout en overige onopgeloste stoffen en wordt moederloog genoemd. Ook het zout dat we op deze manier verkrijgen is nog niet geheel zuiver het bevat ook nog andere stoffen. Door dit zout telkens opnieuw in water op te lossen en te verdampen wordt het steeds zuiverder.  Het zout dat men in Boekeloo aantreft in de bodem is op deze wijze gevormd uit een vroegere zee die langzamerhand geheel is verdampt.
+</i>
+</dd>
+</dl><p></p>
+
+<dl class='mathplain'>
+<dt class='mathplain' style=' text-transform: capitalize'><h5>voorbeeld</h5></dt>
+<dd class='mathplain'>
+<b></b>
+<i> Drinkwater winning uit zeewater. Door het verdampen verdwijnt de vluchtige stof. Soms is deze stof belangrijker dan de achterblijvende stof. In dat geval kan men de vluchtige stof uit de vrijgekomen damp terugwinnen door deze te koelen waardoor de vluchtige stof weer condenseert. Dit process van verdampen en condenseren heet <i>destillatie</i>. Om zuiver water te verkrijgen dient men het proces een aantal malen te herhalen.
+</i>
+</dd>
+</dl><p></p>
+<h3 id='h3_1'>Homogeen mengsel</h3><p></p>
+Als de verschillende zuivere stoffen gelijkmatig met elkaar zijn vermengd spreken we van een <b>homogeen mengsel</b>. In een homogeen mengsel zijn de eigenschappen van het mengsel vrijwel overal gelijk. We kunnen de verschillende stoffen in een homogeen mengsel niet met het oog, of zelfs niet met de microscoop onderscheiden. Kraanwater is een voorbeeld van een homogeen mengsel. Naast water bestaat kraanwater uit allerlei verschillende stoffen, zouten, weliswaar in lage concentraties.<p></p>
+We onderscheiden de volgende soorten homogene mengsels:<p></p>
+
+<ul>
+<li><b>oplossing</b>: een heldere vloeistof waarin vaste stoffen zijn opgelost, bijvoorbeeld suikerwater</li>
+<li><b>vloeistofmengsel</b>: een helder mengsel waarin mengbare vloeistoffen zijn opgelost, bijvoorbeeld alcohol en water.</li>
+<li><b>gasmengsel</b>: elk mengsel van gassen, bijvoorbeeld lucht.</li>
+<li><b>legering</b>: een mengsel van metalen, bijvoorbeeld brons.
+</li>
+</ul><p></p>
+
+<h3 id='h3_2'>Heterogeen mengsel</h3><p></p>
+In een heterogeen mengsel zijn de verschillende stoffen wel zichtbaar, soms met microscoop.<p></p>
+<b>Cohesie</b> is de onderlinge aantrekkingskracht tussen gelijke moleculen zonder dat er sprake is van een chemische binding. <b>Adhesie</b> is de onderlinge aantrekkingskracht tussen ongelijke moleculen zonder dat er sprake is van een chemische binding. Indien de cohesie krachten groter zijn dan de adhesie krachten ontstaat een heterogeen mengsel, anders een homogeen mengsel. Als de cohesiekrachten maar een klein beetje sterker zijn dan de adhesiekrachten ontstaat een <i>colloïdaal mengsel</i> waarbij kleine deeltjes, de colloïdale stof, zich in het het dispersiemiddel (de andere stof) bevinden.
+Een colloïdaal mengsel kan bestaan uit een gasvorming, vloeibaar of vast medium en de deeltjes zelf kunnen vast, vloeibaar of gasvormig zijn.<p></p>
+<table>
+<tr>
+<th>Heterogeen mengsel </th>
+<th> in vaste stof </th>
+<th> in vloeistof </th>
+<th> in gas  <p></p></th>
+</tr>
+<tr>
+<td>vaste stof </td>
+<td> grof mengsel (zand) </td>
+<td> suspensie (modder) </td>
+<td> rook <p></p></td>
+</tr>
+<tr>
+<td>vloeistof </td>
+<td> pasta </td>
+<td> emulsie (melk) </td>
+<td> nevel (mist) <p></p></td>
+</tr>
+<tr>
+<td>gas </td>
+<td> vast schuim </td>
+<td> vloeibaar schuim </td>
+<td> nvt <p></p></td>
+</tr>
+</table>
+<p></p>
+<p></p>
+<p></p>
+
+
+</section>
+<section>
+
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

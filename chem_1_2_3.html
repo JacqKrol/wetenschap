@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+<a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+<!--menuend-->
+ <!--navstart-->
+<a href="chem_1_3.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1_2_2.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a> 
+<!--navend-->
+ </div>
+<h1>Chemische Reacties</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Chemische Reacties</a>
+<ul>
+<li><a href='#h3_1'>Aantoningsreacties</a></li>
+<li><a href='#h3_2'>Exotherme en Endotherme Reacties</a></li>
+<li><a href='#h3_3'>Reactiesnelheid</a></li>
+<li><a href='#h3_4'>Evenwichten</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+<h2 id='h2_1'>Chemische Reacties</h2>
+Om verbindingen te scheiden maakt men gebruik van chemische eigenschappen. Deze scheidingsmethode vindt altijd plaats met behulp van <i>chemische reacties</i>. Een chemische reactie ontstaat als <i>beginstoffen</i> of <i>reactanten</i> worden gemengd, onder bepaalde condities, die leidt tot de vorming van nieuwe stoffen, de <i>reactieproducten</i>. Als we natrium mengen met een zoutzuur oplossing ontstaat een chemische reactie. We zien de vorming van een ontbrandbaar gas, en als we de oplossing daarna indampen blijft een stof over die we keukenzout noemen. De beginstoffen zijn verdwenen. Keukenzout heeft geheel andere eigenschappen dan de beginstoffen natrium en zoutzuur. Dit is kenmerkend voor een chemische reactie: er ontstaan nieuwe stoffen met unieke eigenschappen. Het plaatsvinden van een reactie is te herkennen aan typische reactieverschijnselen zoals: kleurverandering, gasbelletjes in een oplossing, geluid, lichtflits, vuur, rook, warmte en geur.<p></p>
+We onderscheiden een paar reactiesoorten:<p></p>
+<ul>
+<li><i>ontledingsreacties</i>: een chemische reactie waarbij elementen of verbindingen uit een samengestelde stof worden teruggewonnen</li>
+<li><i>synthesereacties</i>: een chemische reactie waarbij uit de beginstoffen geheel nieuw stoffen worden gemaakt
+</li>
+</ul><p></p>
+
+De fase van een stof kan tijdens een chemische reactie veranderen. Daarom geven we meestal in een reactievergelijking ook de fase aan met een letter tussen haakjes:<p></p>
+<ul>
+<li>vaste stof: (s)olid</li>
+<li>vloeistof: (l)iquid</li>
+<li>opgelost in water: (aq)ueous</li>
+<li>gas: (g)as
+</li>
+</ul><p></p>
+
+Als een stof verandert van fase, bijvoorbeeld van vast naar vloeistof, is er geen sprake van een chemische reactie. De stof blijft gelijk. Als een zout wordt opgelost in water, splitst het zich in ionen, de ionen gedragen zich wel anders dan de element vorm van de stof, maar we spreken toch niet over een chemische reactie omdat er zich geen nieuwe stoffen vormen tijdens het oplossen.<p></p>
+<h3 id='h3_1'>Aantoningsreacties</h3>
+Chemische reacties worden soms gebruikt om aan te tonen dat een bepaalde stof aanwezig is. Dit noemen we <i>aantoningsreacties</i>.<p></p>
+<table>
+<tr>
+<th>Stof </th>
+<th> Reagens </th>
+<th> Waarneming <p></p></th>
+</tr>
+<tr>
+<td>koolstofdioxixe </td>
+<td> helder kalkwater </td>
+<td> troebel kalkwater <p></p></td>
+</tr>
+<tr>
+<td>water </td>
+<td> wit kopersulfaat </td>
+<td> wit kopersulfaat wordt blauw <p></p></td>
+</tr>
+<tr>
+<td>suiker </td>
+<td> Haines </td>
+<td> troebel oranje <p></p></td>
+</tr>
+<tr>
+<td>jood (aq) </td>
+<td> zetmeel (stijfsel) </td>
+<td> donkerblauw <p></p></td>
+</tr>
+<tr>
+<td>zwaveldioxide </td>
+<td> broomwater joodwater </td>
+<td> gelige water ontkleurt <p></p></td>
+</tr>
+<tr>
+<td>suiker </td>
+<td> Haines </td>
+<td> troebel oranje <p></p></td>
+</tr>
+<tr>
+<td>onverzadigde koolwaterstoffen </td>
+<td> Hbroomwater joodwater </td>
+<td> gelige water ontkleurt <p></p></td>
+</tr>
+<tr>
+<td>zuurstof(g) </td>
+<td> gloeiende houtspaander </td>
+<td> houtspaander licht op <p></p></td>
+</tr>
+<tr>
+<td>waterstof(g) </td>
+<td> vlammetje </td>
+<td> knal <p></p></td>
+</tr>
+</table>
+<p></p>
+Als gevraagd wordt om jodide ionen aan te tonen, moet men dus eerst een stof toevoegen om jood atomen te verkrijgen, bijvoorbeeld chloor, aangevuld met een zetmeeloplossing.<p></p>
+<h3 id='h3_2'>Exotherme en Endotherme Reacties</h3>
+De atomen worden in een verbinding bij elkaar gehouden door de <i>bindingsenergie</i> in de stof. Bij een ontledingsreactie moet altijd energie worden toegevoegd om deze verbindingen te verbreken. Dit kan door warmte (thermolyse), stroom (electrolyse) of licht (photolyse). Als de verbindingen verbroken worden dan komt de bindingsenergie in de vorm van warmte vrij. Reacties waar energie vrijkomt, bijvoorbeeld een verbrandingsreactie, worden <i>exotherme</i> reacties genoemd. Als een reactie energie opneemt spreekt men van een <i>endotherme</i> reactie. Om te smelten neemt de stof warmte uit de omgeving op. Het is een endotherme reactie.<p></p>
+Het <i>energieverloop</i> van een chemische reactie wordt weergegeven in een <i>energiediagram</i>. Om een chemische reactie te laten plaatsvinden is altijd een hoeveelheid <i>activeringsenergie</i> nodig. Bij een exotherme reactie zal het energieniveau van de producten altijd lager liggen dan van de beginstoffen. Het verschil hiertussen is de <i>reactie-energie</i> die is vrijgegeven aan de omgeving. Bij een endotherme reactie zal het energieniveau van de producten lager liggen dan van de beginstoffen. De producten hebben de reactie-energie opgenomen uit de omgeving. De reactie-energie is meestal in de vorm van warmte. We spreken dan van reactiewarmte. In hierna volgende figuren wordt dit schematisch getoond.<p></p>
+<i id='LBLexothermereactie'></i>
+
+<img src='./images/exothermereactie.png' title ='Exotherme reactie' alt='Exotherme reactie'>
+<p></p>
+<i id='LBLendothermereactie'></i>
+
+<img src='./images/endothermereactie.png' title ='Endotherme reactie' alt='Endotherme reactie'>
+<p></p>
+De reactiewarmte, $\Delta E$, uitgedrukt in Joule per mol, die ontstaat om uit enkelvoudige verbindingen een samengestelde verbinding te vormen wordt <i>vormingswarmte</i> genoemd. Deze staan in BINAS57 voor een aantal stoffen vermeld. Als $\Delta E<0$ is er sprake van een exotherme reactie en anders van een endotherme reactie. De reactiewarmte om uit een samengestelde stof enkelvoudige stoffen te verkrijgen heet <i>ontledingswarmte</i> en is even groot maar tegengesteld als de vormingswarmte voor dezelfde stoffen.<p></p>
+Met de vormingswarmte voor stoffen kunnen we de reactiewarmte van een chemische reactie berekenen door:
+\[
+\Delta E_{\text{reactie}} = \Delta E_{\text{producten}} - \Delta E_{\text{beginstoffen}}
+\]<p></p>
+Laten we als voorbeeld de verbranding van 1 mol methaan bekijken.
+\[
+\ce{CH4(g) + 2O2(g) -> CO2(g) + 2H2O(l)}
+\]<p></p>
+Voor het bepalen van de vormingswarmte van de beginstoffen moeten we alleen de vormingswarmte van de samengestelde stoffen bepalen. In dit geval dus $\ce{CH4(g)}$. In BINAS57 vinden we hiervoor $-0.76\times 10^5$. We doen hetzelfde voor de vormingswarmte van de samengestelde stoffen in de producten. Voor $\ce{CO2(g)}$ vinden we $-3.935\times 10^5$ en voor $\ce{ 2H2O(l)}$ verkrijgen we $2\times -2.42\times 10^5$.
+Dit geeft:
+\[
+\Delta E_{\text{reactie}} = (2 \times -2.42 - 3.935 - -0.76)\times 10^5= -8.7\times 10^5 J
+\]<p></p>
+<h3 id='h3_3'>Reactiesnelheid</h3>
+Reacties tussen deeltjes vinden plaats tijdens een botsing van de deeltjes. Niet alle botsingen leiden tot een reactie. Botsingen die tot een reactie leiden noemen we effectieve botsingen. De reactiesnelheid, $s$, is het aantal mol van een stof die per seconde per liter verdwijnt of ontstaat: $\text{mol}\cdot s^{-1}\cdot L^{-1}$. De beginstoffen verdwijnen en de producten ontstaan. In het begin van een reactie, als er nog veel beginstoffen aanwezig zijn, zal de reactiesnelheid in het algemeen hoger liggen dan na verloop van tijd.<p></p>
+De reactiesnelheid wordt beïnvloedt door een aantal factoren:<p></p>
+<ul>
+<li><i>soort stof</i>: het verschil in elektronnegativiteit tussen twee stoffen bepaalt in belangrijke mate of de stoffen met elkaar reageren (aan elkaar kleven) of niet</li>
+<li><i>verdelingsgraad</i>: voor vaste stoffen geldt dat naarmate de verdelingsgraad groter is er sprake zal zijn van een groter oppervlak en er per tijdseenheid meet botsingen met de deeltjes van de stof kunnen plaatsvinden en dus meer effectieve botsingen en daarmee een hogere reactiesnelheid</li>
+<li><i>concentratie</i>: naarmate meer deeltjes per volume-eenheid aanwezig zijn, zullen er meer botsingen per tijdseenheid plaatsvinden en dus meer effectieve botsingen en dus een hogere reactiesnelheid. De concentratie verandering komt overeen met een druk verandering.</li>
+<li><i>temperatuur</i>: naarmate de temperatuur hoger is zal de snelheid van de deeltjes toenemen en dus zullen ze harder botsen waardoor meer effectieve botsingen optreden en dus een hogere reactiesnelheid</li>
+<li><i>katalysator</i>: een katalysator is een stof die de reactie snelheid verhoogt maar zelf niet verbruikt wordt in de reactie. Bijvoorbeeld een enzym is een katalysator in de cel.
+</li>
+</ul><p></p>
+
+<h3 id='h3_4'>Evenwichten</h3>
+Er zijn nu twee soorten reacties.<p></p>
+<ul>
+<li><i>Aflopende reacties</i>, $\ce{->}$: waarbij tenminste één van de beginstoffen volledig wordt omgezet in producten</li>
+<li><i>Evenwichtreacties</i>,$\ce{<=>}$: waarbij de reactie in beide richtingen verloopt. Na verloop van tijd zal de reactiesnelheid in beide richtingen even groot zijn, zodat de concentraties van alle aanwezige stoffen niet meer veranderd. Er is dus een dynamische evenwicht bereikt. Afhankelijk van de hoogte van de concentraties van de stoffen spreekt men over de ligging van het evenwicht: een <i>evenwicht naar rechts, links of in het midden</i>.
+</li>
+</ul><p></p>
+
+ Een evenwichtsreactie kan men aflopend maken door één van de producten uit het reactiemengsel te verwijderen. Bijvoorbeeld als we calciumoxide vormen uit calciumcarbonaat moet men de gevormde kooldioxide worden verwijderd om een aflopende reactie te verkrijgen:
+ \[
+ \ce{CACO3(s) <=> CaO(s) + CO2(g)}
+ \]<p></p>
+ We onderscheiden verschillende soorten evenwichten:
+ 
+<ul>
+<li><i>homogeen</i>:  alle stoffen in de evenwichtsreactie zijn van dezelfde fase</li>
+<li><i>heterogeen</i>: de stoffen in de evenwichtsreactie zijn van verschillende fase</li>
+<li><i>verdelingsevenwicht</i>: het evenwicht bestaat uit een verdeling tussen twee stoffen, bijvoorbeeld prik in een flesje cola, $\ce{CO2(aq) <=> CO2(g)}$
+ </li>
+</ul><p></p>
+
+Het duurt enige tijd voordat een evenwicht wordt bereikt, <i>insteltijd</i>. Als het evenwicht is bereikt zal de concentratie van de stoffen constant zijn. Dit is de <i>evenwichtsvoorwaarde</i>. De verhouding van de concentraties die optreedt bij de evenwichtsvoorwaarde noemt men de <i>evenwichtsconstante K</i>.<p></p>
+De evenwichtsconstante van een reactie:
+\[
+\ce{ nA(g) + mB(g) <=> pD(aq) + qE(aq)}
+\]
+bepaalt men als volgt:
+\[
+\frac{[D]^p\cdot[E]^q}{[A]^n\cdot[B]^m}=K
+\]
+Als de stof zich in vaste (s) of vloeibare (l) vorm bevindt neemt men voor de concentratie de waarde 1.<p></p>
+Voor de oplosbaarheid van zouten hanteert men het <i>oplosbaarheidsproduct</i> $K_s$ en voor verdelingsevenwichten spreekt men van het <i>verdelingsevenwicht</i> $K_v$.<p></p>
+Voor gassen kan men de concentratie nemen of de partiële gasdrukken, die rechtevenredig zijn met de concentraties. De concentratie van lucht is bijvoorbeeld zuurstof $20\%$ en stikstof $80\%$, dan zijn de partiële gasdrukken $0.20 \text{bar}$ en $0.8\text{bar}$.<p></p>
+<h4>Verschuiven van Evenwichten</h4>
+Als een evenwicht is bereikt kan men dit evenwicht verstoren door een of meer van de volgende omstandigheden:<p></p>
+<ul>
+<li>verandering van het volume</li>
+<li>toevoegen of verwijderen van stoffen</li>
+<li>temperatuur veranderen
+</li>
+</ul><p></p>
+
+Het verstoren van het evenwicht leidt tot een verandering van de concentratie van de stoffen. Er ontstaat een nieuw evenwicht zodanig dat de verhouding tussen de concentraties weer gelijk is aan de evenwichtsconstante. Het evenwicht kan daarbij meer naar links of naar rechts verschuiven. Verandering van de temperatuur leidt ook tot een verandering van de evenwichtsconstante.<p></p>
+Het komt er op neer dat het systeem telkens probeert de opgetreden verstoring teniet te doen. Stel voor een evenwichtsreactie waarbij uit 1 mol stof 2 mol van een andere stof wordt gevormd. Als we dan het volume verkleinen neemt de concentratie van de stoffen toe. Het systeem zal dan reageren door de concentraties te verkleinen. Dit kan door het evenwicht meer naar links te verschuiven. Er ontstaat dan weer een nieuw evenwicht waarbij de concentratie van het product lager is en die van de beginstof hoger.<p></p>
+Toevoegen van een katalysator verandert het evenwicht niet, alleen de reactiesnelheid in beide richtingen. De insteltijd van het evenwicht is sneller. De ligging van het evenwicht blijft gelijk.<p></p>
+<p></p>
+<p></p>
+
+</section>
+<section>
+
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>

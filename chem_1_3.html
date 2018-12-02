@@ -1,0 +1,678 @@
+<!DOCTYPE HTML>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	font-size: 1.4rem;
+	font-family:'adobe-caslon-pro', Georgia, "Times New Roman", Times, serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#167020;
+	font-weight:bold;
+}
+h1:before {
+    content:' ';
+    display:block;
+    border:3px solid #167020;
+    background-color:#167020;
+}
+h2:before {
+    content:' ';
+    display:block;
+    border:2px solid #167020;
+    background-color:#167020;
+}
+h3:before {
+    content:' ';
+    display:block;
+    border:1px solid #167020;
+    background-color:#167020;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+}
+table {
+	 display: block;
+	 margin-left: auto;
+     margin-right: auto;
+     max-width: 80%;
+	 border-collapse: collapse;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+tr:nth-child(odd){background-color: #CECECE;}
+tr:hover {background-color: #707070;}
+td, th {
+    border: 1px solid #707070;
+    padding: 8px;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #167020;
+    color: white;
+}
+.center {
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+	width:80%;
+}
+.footnote, .bib {
+	color:#167020;
+	font-size: 18px;
+}
+dd.mathdef, dd.mathplain, dd.mathproof {
+	background-color:#F8F8F8;
+}
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+.toc_title {
+    font-weight: 700;
+    text-align: center;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+    list-style: outside none none !important;
+}
+</style>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ] ,
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["STIX","TeX"], preferredFont: "TeX", imageFont: null },
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js","mhchem.js"],
+	Macros: {
+		norm:['{\\left\\Vert#1\\right\\Vert}',1],
+		abs:['{\\lvert#1\\rvert}',1],
+		less:['<'],
+		vec:['{\\boldsymbol#1}',1],
+		
+	},
+	equationNumbers: { autoNumber: "all" }
+  }
+  });
+</script>
+</script>
+<!--<script src="MathJax/MathJax.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" type="text/javascript"></script>
+<script type="text/javascript">
+function swap(targetId){
+if (document.getElementById)
+{
+target = document.getElementById(targetId);
+if (target.style.display == "none")
+{
+target.style.display = "block";
+}
+else
+{
+target.style.display = "none";
+}
+}
+}
+</script>
+</head>
+<div  style="min-height:100vh">
+<body>
+<header>
+<div class="w3-container, center" style='background-color: white'>
+<div class="w3-bar w3-border w3-round w3-card-4 w3-light-grey">
+<!--menustart-->
+<a href="index.html"class="w3-bar-item w3-button w3-border-right" style="text-shadow:1px 1px 0 #444;font-size:20px"><img src="images/icons8-university-40.png" alt="Wetenschap Online" title="Wetenschap Online"/></a>
+<div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-test-tube-40.png" alt="Scheikunde" title="Scheikunde"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="chem_1.html" class="w3-bar-item w3-button">Basiskennis Scheikunde</a>
+    </div>
+ </div><div class="w3-dropdown-hover">
+    <button class="w3-button w3-border-right"><img src="images/icons8-book-shelf-40.png" alt="Boeken" title="Boeken"/></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+       <a href="book_1.html" class="w3-bar-item w3-button">Links</a>
+    </div>
+ </div>
+<!--menuend-->
+ <!--navstart-->
+<a href="chem_1_4.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-next-page-40.png" alt="Volgend Hoofdstuk" title="Volgend Hoofdstuk"/></a>
+ <a href="chem_1_2_3.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-back-to-40.png" alt="Vorig Hoofdstuk" title="Vorig Hoofdstuk"/></a>
+ <a href="chem_1.html" class="w3-bar-item w3-button w3-border-right w3-right"><img src="images/icons8-first-40.png" alt="Begin" title="Begin"/></a> 
+<!--navend-->
+ </div>
+<h1>Zuren, Basen en Zouten</h1>
+<div class="w3-row">
+<div class="w3-col m4">
+<p></p>
+</div>
+<div class="w3-col m5">
+<div id="toc_container">
+<p class="toc_title">Inhoudsopgave</p>
+<ul class = 'toc_list'>
+<li><a href='#h2_1'>Water</a>
+<ul>
+<li><a href='#h3_1'>Water op Aarde</a></li>
+<li><a href='#h3_2'>Water en zijn Dynamisch Evenwicht</a></li>
+<li><a href='#h3_3'>Water als Oplosmiddel</a></li>
+<li><a href='#h3_4'>Kristalwater en Hydraten</a></li>
+</ul>
+</li>
+<li><a href='#h2_2'>Zouten</a>
+<ul>
+<li><a href='#h3_5'>Definities</a></li>
+<li><a href='#h3_6'>Zoutvorming</a></li>
+</ul>
+</li>
+<li><a href='#h2_3'>Zuren en Basen</a>
+<ul>
+<li><a href='#h3_7'>Sterke en Zwakke Zuren en Basen</a></li>
+<li><a href='#h3_8'>Zure en Basische Oplossingen</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="w3-col m4">
+<p></p>
+</div>
+</div>
+</div>
+</header>
+<article>
+<div class="w3-container, center" style='background-color: white'>
+<section>
+<p></p>
+
+Zuren, basen en zouten zijn anorganische stoffen die een belangrijke rol spelen in allerlei chemische reacties. Bijna altijd vinden deze reacties plaats in een waterige oplossing. We zullen dus eerst stilstaan bij de karakteristieken van water. Daarna definiëren we wat een zuur en wat een base is. Het zal blijken dat de reactie tussen een zuur en een base leidt tot de vorming van een zout. Hoewel een zout ook op andere wijze kan worden gevormd dan door een zuur-bare reactie. Er zijn een aantal bekende zuren en basen. De sterke zuren en basen moet je uit je hoofd leren omdat ze voortdurend terugkomen. De ionen van deze zuren en een basen moet je ook uit je hoofd leren. Met zuren en basen kun je zure en basische oplossingen maken. Ook daarvan zijn we weer een aantal bekende voorbeelden die in veel vraagstukken terugkomen.<p></p>
+<h2 id='h2_1'>Water</h2><p></p>
+<h3 id='h3_1'>Water op Aarde</h3>
+Water is een uitzonderlijke stof. Water lijkt een noodzakelijke voorwaarde te zijn om leven mogelijk te maken. Het komt relatief veel voor in het universum in alle mogelijke fasen als waterdamp, ijs en vloeistof. Het komt ook voor in gesteenten en mineralen. Het water komt door vulkaan erupties uit het binnenste van een planeet in de vorm van waterdamp aan het oppervlak. Op planeten zonder atmosfeer zal uiteindelijke al het aanwezige waterdamp verdwijnen in de kosmos. Op aarde is een deel van het aanwezige water via vulkaan erupties in de atmosfeer gekomen en door regenval, een unieke eigenschap van water om waterdruppels te vormen, neergekomen op het aardoppervlak. Uit monsters van meteorieten blijkt dat deze een groot percentage water bevatten, meer dan gesteente op aarde. Dit doet vermoeden dat een belangrijk deel van de waterdamp verdwenen is in de kosmos. Van het beschikbare water op aarde is 96% aanwezig in de oceanen, 3% ijskappen, 1% grondwater en minder dan 1/100% rivieren, meren en atmosfeer. Er wordt geschat dat de hoeveelheid water in het binnenste van de aarde, opgeslagen in mineralen, 33x zo groot is als het water van de oceanen.<p></p>
+<h3 id='h3_2'>Water en zijn Dynamisch Evenwicht</h3>
+Zuiver water is een molecuul van waterstof en zuurstof, $\ce{H2O}$. In water komen kleine concentraties voor van het proton $\ce{H+}$, ook wel aangeduid als <i>hydronium</i> of <i>oxonium</i>, $\ce{H3O+}$, en het anion <i>hydroxide</i> $\ce{OH-}$:
+\[
+\ce{H2O + H2O <=> H3O+ + OH-}
+\]
+Het betreft een evenwichtsreactie. We kunnen dus de evenwichtsconstante $K_{eq}$<sup class='footnote'><a href = '#fn1' id = 'fnref1'><b>1</b></a></sup> berekenen:
+\[
+K_{eq} = \frac{[H^+].[OH^-]}{[H_2O]}
+\]
+Het evenwicht ligt ver naar links, de concentraties van de ionen zijn klein. De concentratie $[H_2O]$ is een constante. In de bepaling van een evenwichtsconstante nemen we alleen opgeloste stoffen en gassen mee, maar niet vaste stoffen en vloeistoffen. Daarom hanteert men de zogenaamde waterconstante $K_w$:
+\[
+K_w = K_{eq} [H_2O]=[H^+].[OH^-]
+\]
+<h4>Berekening van de waterconstante</h4>
+Bij een temperatuur van $4^\circ$ C en dichtheid van 1 bar (STP) is de dichtheid van water 1.0 g/mL. De hoeveelheid stof per liter volgt dan:
+\[
+\text{n}(H_2O) = \frac{1.0 \text{g}}{18 \text{g/mol}} = 55.56 \text{mol}
+\]
+Dus bij dezelfde temperatuur zal een liter water altijd 55.56 mol water moleculen bevatten: $[H_2O]=55.6M$. Bij een temperatuur van 298 K (bijna $25^\circ$ C) bedraagt  $K_{eq}=1.80 \times 10^{-16}M$. Dus $K_w=55.5 M \cdot 1.80 \times 10^{-16} M = 1.0 \times 10^{-14} M^2$.  Aangezien elk gesplitst watermolecuul 1 $\ce{H+}$ en 1 $\ce{OH-}$ ion vormt geldt ook $[H^+]=[OH^-]$. Hieruit volgt dan $[H^+]=[OH^-]=1.0\times 10^{-7} M$. We definiëren $pK_w = -\log_{10} K_w$ en $pH= -\log_{10} [\ce{H+}]$ en $pOH= -\log_{10} [\ce{OH-}]$ en dus $pK_w=pH+pOH$. In de evenwicht situatie bij 298 K geldt dus $pK_w=14,pH=7, pOH=7$. In BINAS 50A staat de waterconstante bij andere temperaturen.<p></p>
+<h3 id='h3_3'>Water als Oplosmiddel</h3>
+Water wordt vaak gebruikt als <i>oplosmiddel</i> voor basen, zuren en zouten. Een stof is <i>oplosbaar</i> als de deeltjes van het oplosmiddel en de opgeloste stof zich in voldoende mate mengen. Het water <i>hydrateert</i>, omringd, de opgeloste stof. De oplossing is dan helder. Indien een stof niet goed oplost in een oplosmiddel zal de oplossing <i>troebel</i> zijn, een <i>suspensie</i>, en zal zich op de bodem een <i>neerslag</i> vormen. In BINAS45A staat of een zout, een ionverbinding, <i>goed oplosbaar</i> is, <i>matig</i> of <i>slecht oplosbaar</i>. Als de ionen van een slecht oplosbaar zout zich in een oplossing bevinden zal zich een neerslag vormen. Als we twee goed oplosbare zouten mengen kan zich een <i>neerslagreactie</i> voordoen als de combinatie van een positief en negatief ion slecht oplosbaar is. Voegen we bijvoorbeeld twee goed oplosbare zouten: loodnitraat $\ce{Pb(NO3)2(aq)}$ en natriumjodide $\ce{NaI(aq)}$ samen dan doet zich de volgende <i>neerslagreactie</i> voor tussen de twee slecht oplosbare ionen:
+\[
+\ce{Pb2+(aq) + 2I-(aq) -> PbI2(s)}
+\]
+Water is een <i>polaire stof</i>. Een stof is polair als de deeltjes een positieve en elektrische lading hebben aan de uiteinden, <i>dipool</i>. De totale elektrische lading van een molecuul is overigens altijd neutraal. Bij water heeft het zuurstof atoom een kleine negatieve lading omdat het de elektronen van waterstof dicht naar zich heeft toegetrokken. De waterstof atomen krijgen daardoor een licht positieve lading. Door deze elektrische eigenschappen van het watermolecuul ordenen de moleculen zich zodanig dat de waterstof atomen van het ene molecuul kleven aan de zuurstof atomen van twee andere watermoleculen. Deze verbindingen heten <i>waterstofbruggen</i>.   <i>Polaire stoffen</i> lossen gemakkelijker op in een polair oplosmiddel dan in een apolair. Daarom lossen ionverbindingen, die polair zijn,  gemakkelijker op in water, dan bijvoorbeeld in petroleum (een apolaire stof). Stoffen die makkelijk oplossen in water zijn <i>hydrofiel</i>. Stoffen die niet oplossen in water zijn <i>hydrofoob</i>. Moleculen met $OH$ of $NH$ zijn hydrofiel.<p></p>
+Wanneer een ionverbinding oplost in water dan <i>dissocieert</i> de verbinding zich in positive en negatieve ionen. Dit blijkt bijvoorbeeld uit het feit dat een opgelost zout elektriciteit geleid. De negatieve ionen kunnen dan vrij bewegen in de oplossing. Keukenzout opgelost in water bestaat uit losse natrium en chloride ionen. We schrijven dit in een <i>oplosvergelijking</i>:
+\[
+\ce{NaCl(s) ->[aq] Na+(aq) + Cl-(aq)}
+\]
+of
+De oplossing van magnesiumnitraat:
+\[
+\ce{Mg(NO3)2(s) ->[aq] Mg{2+}(aq) + 2 NO3^-(aq)}
+\]
+We schrijven in deze vergelijking niet de stof water. Hoewel water zorgt voor het hydrateren van de stof reageert water niet met de stof. Er treedt geen chemische reactie op.
+Indampen is de omgekeerde reactievergelijking:
+\[
+\ce{Na+(aq) + Cl-(aq) -> NaCl(s)}
+\]
+Moleculaire stoffen kunnen ook oplossen in water, echter de moleculen blijven meestal intact, alleen gaat de fase van vast naar opgelost. Bijvoorbeeld suiker oplossen in water schrijven we in een oplosvergelijking als volgt:
+\[
+\ce{C12H22O11(s) -> C12H22O11(aq) }
+\]<p></p>
+Het feit dat zouten kunnen dissociëren in water en het feit dat water kan reageren met zuren en basen maakt water een aantrekkelijke stof voor talloze chemische reacties tussen stoffen. We zullen dit hierna verder bespreken.<p></p>
+<h3 id='h3_4'>Kristalwater en Hydraten</h3>
+Een ionverbinding bestaat uit een <i>kristalrooster</i>. Nu kan het voorkomen dat watermoleculen worden opgenomen in het kristalrooster. Dit water wordt dan <i>kristalwater</i> genoemd en de stof een <i>hydraat</i>. We schrijven voor de chemische formule van een hydraat eerst de ionverbinding dan een punt gevolgd door het aantal watermoleculen per ionverbinding.<p></p>
+Bijvoorbeeld gips $\ce{CaSO4}$ wordt hard als er water wordt toegevoegd:
+\[
+\ce{CaSO4(s) + 2H2O(l) -> CaSO4(s).2H2O}
+\]
+of silicagel een droogmiddel om apparatuur tijdens transport droog te houden:
+\[
+\ce{SiO2(s) + 2H2O(l) -> SiO2(s).2H2O}
+\]
+We kunnen het kristalwater door het verwarmen van de vaste stof laten verdampen. Waardoor het water van het zout wordt gescheiden:
+\[
+\ce{CaSO4(s).2H2O -> CaSO4(s) + 2H2O(l) }
+\]<p></p>
+<h2 id='h2_2'>Zouten</h2><p></p>
+<h3 id='h3_5'>Definities</h3>
+Traditioneel werd in de scheikunde een stof als zout bestempeld als de stof gevormd kon worden uit een reactie tussen een <i>base</i> en een <i>zuur</i> in een zogenaamde <i>zuur-base reactie</i>.<p></p>
+
+<dl class='mathdef'>
+<dt class='mathdef' style=' text-transform: capitalize'><h5>definitie</h5></dt>
+<dd class='mathdef'>
+<b>Zout</b><p></p>
+Een zout is een stof die kan worden gevormd door een zuur-base reactie.<p></p>
+</dd>
+</dl><p></p>
+<p></p>
+<dl class='mathdef'>
+<dt class='mathdef' style=' text-transform: capitalize'><h5>definitie</h5></dt>
+<dd class='mathdef'>
+<b>Zuur</b><p></p>
+Een zuur is een stof die een anion, zuurrest, bindt met één of meer waterstof protonen: $\ce{Hn^+Z-}$.<p></p>
+</dd>
+</dl>
+Als de zuurrest een anion is met met zuurstof spreken we van <i>oxozuren</i>.<p></p>
+<p></p>
+<dl class='mathdef'>
+<dt class='mathdef' style=' text-transform: capitalize'><h5>definitie</h5></dt>
+<dd class='mathdef'>
+<b>Base</b><p></p>
+Een base is een stof die een kation bindt met één of meer hydroxide ionen: $\ce{M+(OH)n^-}$.<p></p>
+</dd>
+</dl>
+Het kation is meestal een metaalion, maar kan ook een niet-metaal ion zijn zoals ammoniak $\ce{NH3^+}$.<p></p>
+
+De zuurrest van een zuur vormt weer een base, het kan immers een proton opnemen, en wordt daarom ook wel de <i>geconjugeerde base</i> genoemd van het zuur. Andersom is de base die een proton opneemt weer een zuur, het <i>geconjugeerde zuur</i> van de base.<p></p>
+Een zuur en een base opgelost in water geeft een <i>zuur-base reactie</i> waarbij de losse $\ce{H+}$ ionen reageren met de losse $\ce{OH-}$ ionen en water vormen. Het anion en kation vormen dan tezamen een ionverbinding, dergelijke verbindingen noemen we dan een zout:
+\[
+\ce{H+ + nM- + M+ + OH- -> MnM(s) + H2O}
+\]
+Er doet zich een neerslagreactie voor tussen het kation en anion. Het kan ook zijn dat het betreffende zout niet oplost in water. Er vindt dan geen neerslagreactie plaats tussen het kation en anion en we verkrijgen het zout pas als de oplossing in voldoende mate verzadigd is door bijvoorbeeld indampen.
+De enige reactie die altijd bij een zuur-base reactie optreedt is de vorming van moleculair water door overdracht van een proton uit het zuur naar het hydroxide uit de base. De base en het zuur zijn overigens stoffen die eerder gevormd zijn door redox reacties tussen elementen.<p></p>
+Deze definitie van een stof die gebaseerd is op de wijze waarop de stof gevormd kan worden stamt uit het verleden en zegt weinig over de karakteristieken van de stof zelf. Bovendien kunnen zouten ook op andere wijze worden gevormd dan door zuur-base reacties.<p></p>
+<h3 id='h3_6'>Zoutvorming</h3>
+Een zout kan op vele verschillende manieren worden gevormd:<p></p>
+<ul>
+<li>base + zuur $\rightarrow$ zout + water</li>
+<li>basevormende oxide + zuurvormde oxide $\rightarrow$ zout</li>
+<li>basevormende oxide + zuur $\rightarrow$ zout + water</li>
+<li>base + zuurvormde oxide $\rightarrow$ zout</li>
+<li>metaal + zuur $\rightarrow$ zout + waterstof(gas)
+</li>
+</ul><p></p>
+
+Laten we eens kijken hoe we het zout magnesiumsulfaat, $\ce{MgSO4}$, kunnen vormen op deze verschillende wijzen. De eerste methode is om een base met een zuur te laten reageren in een oplossing. Magnesiumhydroxide, $\ce{Mg(OH)2}$, een witte vaste stof, is een sterke base, maar lost slecht op in water. Het zal volledig ioniseren met een sterk zuur als zwavelzuur $\ce{H2SO4}$.
+\[
+\ce{Mg^{2+}(aq) + 2OH-(aq) + 2H+(aq) + SO4^{2-}(aq) ->  MgSO4(s) + 2H2O(l)}
+\]
+Om zwavelzuur te verkrijgen moeten we eerst $\ce{SO3}$ laten reageren met water. We kunnen via een redoxreactie tussen twee oxiden het zout verkrijgen zonder eerst zwavelzuur te moeten vormen:
+\[
+\ce{MgO(s) + SO3(s) ->  MgSO4(s)  }
+\]
+of
+\[
+\ce{Mg(OH)2(s) + SO3(s) ->  MgSO4(s) + H2O(l) }
+\]
+Met zwavelzuur kunnen we het zout produceren via het magnesiumoxide:
+\[
+\ce{MgO(s) + H2SO4(aq) ->  MgSO4(s) + H2O(l) }
+\]
+of rechtstreeks met het metaal en een zuur:
+\[
+\ce{Mg(s) + H2SO4(aq) ->  MgSO4(s) + H2(g) }
+\]<p></p>
+
+<h2 id='h2_3'>Zuren en Basen</h2><p></p>
+<h3 id='h3_7'>Sterke en Zwakke Zuren en Basen</h3>
+Als een zuur of een base volledig dissocieert staan alle moleculen in een oplossing een $\ce{H+}$  of $\ce{OH-}$ ion af. We spreken van een <i>sterk zuur</i> of <i>sterke base</i> en anders van een <i>zwak zuur</i> of <i>zwakke base</i>. In een reactievergelijking schrijven we een opgelost sterk zuur/base in ionen vorm, terwijl een zwak zuur/base in molecuulformule vorm schrijven. De sterkte van een zuur of base wordt aangegeven door de zuur- (Kz/pKz) of baseconstante (Kb/pKb). De reactie van een  verdund zuur (opgelost in water):
+\[
+\ce{HZ(aq) + H2O(l) -> Z-(aq) + H3O+(aq) }
+\]
+We kunnen dan de zuur constante definiëren als volgt:
+\[
+K_z = \frac{[\ce{Z-}].[\ce{H3O+}]}{[HZ]}
+\]
+De reactie van een  verdund zuur (opgelost in water):
+\[
+\ce{B(aq) + H2O(l) -> BH+(aq) + OH-(aq) }
+\]
+We kunnen dan de zuur constante definiëren als volgt:
+\[
+K_b = \frac{[\ce{BH+}].[\ce{OH-}]}{[B]}
+\]
+$pK_z$ en $pK_b$ zijn weer de $-log_{1O}$ waarden.<p></p>
+In BINAS 49 zien we deze waarden voor verschillende zuren en basen. Op elke rij staan naast elkaar zuur de geconjugeerde base, of bezien vanuit de base, de base en het geconjugeerde zuur. Als we een zuur en zijn geconjugeerde base in water oplossen krijgen we een neutrale oplossing. Er geldt dus voor elke zuur en zijn geconjugeerde base dat $K_z+K_b=1.0 10^{-14}$ en daarmee $pK_z + pK_b=14$. Een sterk zuur heeft een zwakke base en een zwak zuur heeft een sterke base.<p></p>
+De sterke zuren zijn:<p></p>
+<ul>
+<li>$\ce{HCL(g)}$ waterstofchloride</li>
+<li>$\ce{HBr(g)}$ waterstofbromide</li>
+<li>$\ce{HI(g)}$ waterstofjodide</li>
+<li>$\ce{HNO3(l)}$ saltpeterzuur</li>
+<li>$\ce{H2SO4(l)}$ zwavelzuur
+</li>
+</ul><p></p>
+
+Voorbeelden van sterke basen zijn:<p></p>
+<ul>
+<li>$\ce{O^{2-}}$</li>
+<li>$\ce{OH^-}$
+</li>
+</ul><p></p>
+
+Voorbeelden van zwakke basen zijn:<p></p>
+<ul>
+<li>$\ce{NH3}$ ammonia</li>
+<li>$\ce{CO3^{2-}}$ carbonaation</li>
+<li>$\ce{HCO3^-}$ waterstof carbonaation
+</li>
+</ul><p></p>
+
+Water is zoals we boven hebben gezien zowel een zwakke base als zwak zuur. Een stof die zowel zich als een zuur of een base kan gedragen noemen we een <i>amfolyt</i>. De amfolyte stof zal reageren met het oplosmiddel als een zuur als $Kz>Kb$ en anders als een base.<p></p>
+Een zuur-base reactie in een oplossing (meestal water) is aflopend (enkele pijl in de reactie vergelijking) indien een sterk zuur met een sterke base reageert. Indien een zwak zuur/base reageert met een sterke base/zuur dan treedt een evenwichtsreactie op (dubbele pijl in de reactie vergelijking).  De reactie is vrijwel geheel aflopend. Een zwak zuur met een zwakke base vormt een evenwichtsreactie. Het evenwicht kan links, rechts of in het midden liggen. Dit wordt bepaald door de Kz van het zuur in de beginstoffen, Kz 1, te vergelijken met de Kz van het geconjugeerde zuur van de base, Kz 2, in het gevormde product. Naarmate Kz 1 groter is dan Kz 2 zal het evenwicht meer naar rechts liggen. Zijn ze ongeveer even groot dan ligt het evenwicht in het midden. Een zeer zwak zuur en zeer zwakke base leiden niet tot een zuur-base reactie.<p></p>
+Laten we eens kijken hoe fosforzuur, een zwak zuur, reageert met water.
+\[
+\ce{H3PO4 + H2O <=> H2PO4- + H3O+}
+\]
+$\ce{H2PO4-}$ is een amfolyte, het kan als base of zuur reageren. In water is echter $Kb>Kz$ en dus zal een evenwichtsreactie optreden die naar links ligt.<p></p>
+Hieronder tonen we een lijst met zuren. Een éénwaardig zuur kan 1 $\ce{H+}$ afstaan, een tweewaardig zuur 2 en een driewaardig zuur 3.<p></p>
+<i>Binaire zuren</i> zijn waterstofverbindingen met een niet-metaal anders dan zuurstof, schematisch: HnM. <i>Ternaire zuren</i> zijn waterstofverbindingen met een niet-metaal en zuurstof, schematisch: HnMO. Anorganische zuren hebben een moleculeformule die begint met \ce{H}.
+<table>
+<caption>Binaire zuren</caption>
+<tr>
+<th>Formule </th>
+<th> Naam </th>
+<th> Zuurrestion <p></p></th>
+</tr>
+<tr>
+<td>$\ce{HF}$ </td>
+<td> waterstoffluoride  </td>
+<td> $\ce{F-}$ <p></p></td>
+</tr>
+<tr>
+<td>$\ce{HCl}$ </td>
+<td>  waterstofchloride, zoutzuur </td>
+<td> $\ce{Cl-}$ <p></p></td>
+</tr>
+<tr>
+<td>$\ce{HBr}$ </td>
+<td> waterstofbromide </td>
+<td> $\ce{Br-}$<p></p></td>
+</tr>
+<tr>
+<td>$\ce{HI}$ </td>
+<td> waterstofjodide </td>
+<td> $\ce{I-}$ <p></p></td>
+</tr>
+<tr>
+<td>$\ce{H2S}$ </td>
+<td> waterstofsulfide </td>
+<td> $\ce{S^{2-}}$<p></p></td>
+</tr>
+<tr>
+<td>$\ce{HCN}$ </td>
+<td> waterstofcyanode, blauwzuur </td>
+<td> $\ce{CN-}$ <p></p></td>
+</tr>
+</table>
+<p></p>
+<table>
+<tr>
+<th>Formule </th>
+<th> Naam  </th>
+<th> Bijbehorend Zuur</th>
+<th> Systematische naam Zuur </th>
+<th> Triviale naam zuur <p></p></th>
+</tr>
+<tr>
+<td>$\ce{SO3^{2-}}$,$\ce{HSO3^-}$ </td>
+<td> sulfietion </td>
+<td> $\ce{H2SO3}$</td>
+<td> waterstofsulfiet</td>
+<td>zwaveligzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{SO4^{2-}}$,$\ce{HSO4^-}$</td>
+<td>sulfaation</td>
+<td>$\ce{H2SO4}$</td>
+<td>waterstofsulfaat</td>
+<td>zwavelzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{NO2^-}$</td>
+<td>nitrietion</td>
+<td>$\ce{HNO2}$</td>
+<td>waterstofnitriet</td>
+<td>salpeterigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{NO3^-}$</td>
+<td>nitraation</td>
+<td>$\ce{HNO3}$</td>
+<td>waterstofnitraat</td>
+<td>saltpeterzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{ClO^{-}}$</td>
+<td>hypochlorietion</td>
+<td>$\ce{HClO}$</td>
+<td>waterstofhypochloriet</td>
+<td>hypochlorigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{ClO2^{-}}$</td>
+<td>chlorietion</td>
+<td>$\ce{HClO2}$</td>
+<td>waterstofchloriet</td>
+<td>chlorigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{ClO3^{-}}$</td>
+<td>chloraation</td>
+<td>$\ce{HClO3}$</td>
+<td>waterstofchloraat</td>
+<td>chloorzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{ClO4^{-}}$</td>
+<td>perchloraation</td>
+<td>$\ce{HClO4}$</td>
+<td>waterstofperchloraat</td>
+<td>perchloorzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{PO4^{3-}}$,$\ce{H2PO4^{-}}$,$\ce{HPO4^{2-}}$</td>
+<td>fosfaation</td>
+<td>$\ce{H3PO4}$</td>
+<td>waterstoffosfaat</td>
+<td>fosforzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{PO3^{3-}}$,$\ce{H2PO3^{-}}$,$\ce{HPO3^{2-}}$</td>
+<td>fosfietion</td>
+<td>$\ce{H3PO3}$</td>
+<td>waterstoffosfiet</td>
+<td>fosforigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{PO2^{3-}}$,$\ce{H2PO2^{-}}$,$\ce{HPO2^{2-}}$</td>
+<td>hypofosfietion</td>
+<td>$\ce{H3PO2}$</td>
+<td>waterstofhypofosfiet</td>
+<td>hypofosforigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{CO3^{2-}}$,$\ce{HCO3^-}$</td>
+<td>carbonaation</td>
+<td>$\ce{H2CO3}$</td>
+<td>waterstofcarbonaat</td>
+<td>koolzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{BrO^-}$</td>
+<td>hypobromietion</td>
+<td>$\ce{HBrO}$</td>
+<td>waterstofhypobromiet</td>
+<td>hypobromigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{BrO2^-}$</td>
+<td>bromietion</td>
+<td>$\ce{HBrO2}$</td>
+<td>waterstofbromiet</td>
+<td>bromigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{BrO3^-}$</td>
+<td>bromaation</td>
+<td>$\ce{HBrO3}$</td>
+<td>waterstofbromaat</td>
+<td>broomzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{BrO4^-}$</td>
+<td>perbromaation</td>
+<td>$\ce{HBrO4}$</td>
+<td>waterstofperbromaat</td>
+<td>perbroomzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{IO^-}$</td>
+<td>hypojodietion</td>
+<td>$\ce{HIO}$</td>
+<td>waterstofhypojodiet</td>
+<td>hypojodigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{IO2^-}$</td>
+<td>jodietion</td>
+<td>$\ce{HIO2}$</td>
+<td>waterstofjodiet</td>
+<td>jodigzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{IO3^-}$</td>
+<td>jodaation</td>
+<td>$\ce{HIO3}$</td>
+<td>waterstofjodaat</td>
+<td>joodzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{IO4^-}$</td>
+<td>perjodaation</td>
+<td>$\ce{HIO4}$</td>
+<td>waterstofperjodaat</td>
+<td>perjoodzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{SiO4^{4-}}$,e.a.</td>
+<td>silicaation</td>
+<td>$\ce{H4SiO4}$</td>
+<td>waterstofsilicaat</td>
+<td>kiezelzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{BO3^{3-}}$,e.a.</td>
+<td>boraation</td>
+<td>$\ce{H3BO3}$</td>
+<td>waterstofboraat</td>
+<td>boorzuur<p></p></td>
+</tr>
+<tr>
+<td>$\ce{AsO3^{3-}}$</td>
+<td>arsenietion</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td>$\ce{AsO4^{3-}}$</td>
+<td>arsenaation</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td>$\ce{CrO4^{2-}}$</td>
+<td>chromaation</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td>$\ce{Cr2O7^{2-}}$</td>
+<td>dichromaation</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td>$\ce{S2O3^{2-}}$</td>
+<td>thiosulfaation</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+<tr>
+<td>$\ce{MnO4^-}$</td>
+<td>permanganaation</td>
+<td></td>
+<td></td>
+<td><p></p></td>
+</tr>
+</table>
+<p></p>
+Enkele organische zuren:<p></p>
+<ul>
+<li><i>Azijnzuur</i>, $\ce{CH3COOH}$. Het zuurrest, heet <i>acetaat</i> $\ce{CH3COO-}$, men schrijft ook we $\ce{Ac-}$ voor acetaat en $\ce{HAc}$ voor azijnzuur.</li>
+<li>Mierenzuur/methaanzuur/hydrogeencarbonzuur, $\ce{HCOOH}$.
+</li>
+</ul><p></p>
+<p></p>
+<p></p>
+<h3 id='h3_8'>Zure en Basische Oplossingen</h3>
+Stoffen opgelost in water kunnen leiden tot een neutrale, basische op zure oplossing. Als het aantal $\ce{H3O+}$ ionen groot is spreekt men van een zure oplossing. Als het aantal $\ce{OH-}$ ionen groot is spreekt men van een basische oplossing. Indien de concentraties gelijk zijn, $[\ce{H3O+}]=[\ce{OH-}]$,is er sprake van een neutrale oplossing. De pH waarde, $-\log [\ce{H+}]$ (in mol/l), is een maat voorde concentratie $[\ce{H3O+}]$. De pH is kleiner dan 7 bij een zure oplossing, 7 bij een neutrale oplossing en groter dan 7 een basische oplossing. De pOH waarde, $\log [\ce{OH-}]$ (mol/l), is een maat voor het aantal $\ce{OH-}$ ionen. De pH+pOH=14. Bij het berekenen van de pH waarde moet het aantal decimalen gelijk zijn aan het aantal significante cijfers van de concentratie $[\ce{H+}]$. Bijvoorbeeld stel $[\ce{H+}]=1.0 10^{-3}$mol/l dan is pH=$3.00$. Omgekeerd kan men dus uitgaande van de pH waarde de concentratie berekenen.<p></p>
+De metaaloxiden van de eerste en tweede groep van het periodiek system vormen basen. Opgelost in water ontstaat een basische oplossing. Dit komt omdat als de metaaloxide oplost zuurstof een sterke base is en van water een $\ce{H+}$ aantrekt:<p></p>
+<ul>
+<li>$\ce{Na2O(l) + H2O -> 2Na+(aq) + 2OH-(aq) }$ natronloog</li>
+<li>$\ce{K2O(l) + H2O -> 2K+(aq) + 2OH-(aq) }$ kaliloog</li>
+<li>$\ce{CaO(l) + H2O -> Ca^{2+}(aq) + 2OH-(aq) }$ kalkwater</li>
+<li>$\ce{BaO(l) + H2O -> Ba^{2+}(aq) + 2OH-(aq) }$ barietwater
+</li>
+</ul><p></p>
+Deze oplossingen kunnen ook worden ingedampt om de hydroxide van deze stoffen te vormen
+ $\ce{NaOH}, \ce{KOH}, \ce{Ca(OH)2},\ce{Ba(OH)2}$.<p></p>
+Oxiden die niet met water reageren, en dus noch een base noch een zuur vormen, heten <i>indifferente oxiden</i>, enkele voorbeelden: koolmonoxide $\ce{CO}$, waterstofperoxide $\ce{H2O2}$, lachgas $\ce{N2O}$, bruinsteen $\ce{MnO2}$.<p></p>
+We kunnen een base toevoegen aan een zure oplossing om een zuur-base reactie te verkrijgen of een zuur aan een basische oplossing.<p></p>
+Als een zout oplost in water kan een neutrale oplossing, een basische of zure oplossing ontstaan. Dit is afhankelijk van of één van de ionen een base of zuur is.<p></p>
+<p></p>
+ 
+</section>
+<section>
+<h2>Voetnoten</h2>
+<ol><li id='fn1'> eq staat voor het Engels equilibrium<a href='#fnref1' title='Back to text.'><i class='fa fa-arrow-circle-o-up'></i></a></li>
+</ol>
+</section>
+<section>
+
+</section>
+</div>
+</article>
+<footer class="w3-border-top w3-border-green w3-padding-small" style="margin-top:95vh; width:100%" >
+<small>Copyright ©  Jacq Krol. Alle rechten voorbehouden.</small>
+</footer>
+</body>
+</div>
+</html>
